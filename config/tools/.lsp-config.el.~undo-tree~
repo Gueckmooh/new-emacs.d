@@ -1,0 +1,36 @@
+(undo-tree-save-format-version . 1)
+"16d32940f491c2d878e7209a9b4ffa728283bdb1"
+[nil nil nil nil (25565 36603 127743 311000) 0 nil]
+([nil nil ((#(";; (progn" 0 3 (fontified t face font-lock-comment-delimiter-face) 3 9 (fontified t face font-lock-comment-face)) . 928) (undo-tree-id13 . -9) (t 25565 34918 639476 45000)) nil (25565 36603 127741 934000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t ws-butler-chg delete)) . 928) (undo-tree-id11 . -1) (undo-tree-id12 . -1) (#("  " 0 2 (fontified t)) . -929) 928) nil (25565 36603 127740 295000) 0 nil])
+([nil nil ((#("  ;;   (lsp-register-client
+" 0 2 (fontified t) 2 3 (fontified t ws-butler-chg delete face font-lock-comment-delimiter-face) 3 7 (fontified t face font-lock-comment-delimiter-face) 7 28 (fontified t face font-lock-comment-face)) . 926) (undo-tree-id8 . -28) (undo-tree-id9 . -2) (undo-tree-id10 . -28)) nil (25565 36603 127737 939000) 0 nil])
+([nil nil ((#("  ;;    (make-lsp-client :new-connection (lsp-tramp-connection \"ccls\")
+" 0 1 (fontified t ws-butler-chg delete) 1 2 (fontified t) 2 8 (fontified t face font-lock-comment-delimiter-face) 8 71 (fontified t face font-lock-comment-face)) . 926) (undo-tree-id6 . -71) (undo-tree-id7 . -71)) nil (25565 36603 127734 844000) 0 nil])
+([nil nil ((#("  ;;                     :major-modes '(c-mode c++-mode)
+" 0 1 (fontified t ws-butler-chg delete) 1 2 (fontified t) 2 3 (fontified t face font-lock-comment-delimiter-face) 3 25 (fontified t face font-lock-comment-delimiter-face) 25 57 (fontified t face font-lock-comment-face)) . 926) (undo-tree-id4 . -57) (undo-tree-id5 . -57)) nil (25565 36603 127732 575000) 0 nil])
+([nil nil ((#("  ;;                     :remote? t
+" 0 1 (fontified t ws-butler-chg delete) 1 2 (fontified t) 2 25 (fontified t face font-lock-comment-delimiter-face) 25 36 (fontified t face font-lock-comment-face)) . 926) (undo-tree-id2 . -36) (undo-tree-id3 . -36)) nil (25565 36603 127730 32000) 0 nil])
+([nil nil ((#("  ;;                     :server-id 'ccls-remote)))
+" 0 1 (fontified t ws-butler-chg delete) 1 2 (fontified t) 2 25 (fontified t face font-lock-comment-delimiter-face) 25 52 (fontified t face font-lock-comment-face)) . 926) (undo-tree-id0 . -52) (undo-tree-id1 . -52)) nil (25565 36603 127724 870000) 0 nil])
+([nil nil ((456 . 459) (t 25565 36603 151553 154000)) nil (25565 36624 918808 514000) 0 nil])
+([nil nil ((459 . 461)) nil (25565 36624 918807 856000) 0 nil])
+([nil nil ((#("c" 0 1 (fontified t ws-butler-chg chg face font-lock-builtin-face)) . -460) (undo-tree-id16 . -1) 461) nil (25565 36624 918807 64000) 0 nil])
+([nil nil ((460 . 467)) nil (25565 36624 918805 494000) 0 nil])
+([nil nil ((993 . 996)) nil (25565 36624 918804 672000) 0 nil])
+([nil nil ((#("  
+" 0 2 (fontified t ws-butler-chg chg) 2 3 (fontified t)) . 994) (undo-tree-id14 . -3) (undo-tree-id15 . -3)) nil (25565 36624 918803 491000) 0 nil])
+([nil nil ((983 . 986)) nil (25565 36624 918784 199000) 0 nil])
+([nil nil ((986 . 998)) nil (25565 36624 918925 373000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1024 . 1025) (nil fontified nil 997 . 1025) (997 . 1025)) nil (25565 36630 912744 891000) 0 nil] [nil nil ((nil rear-nonsticky nil 999 . 1000) (nil fontified nil 999 . 1000) (nil fontified nil 997 . 999) (997 . 1000)) ((#("  
+" 0 2 (ws-butler-chg chg fontified nil) 2 3 (ws-butler-chg chg fontified nil rear-nonsticky nil)) . 997) (undo-tree-id17 . -3) (undo-tree-id18 . -3) (undo-tree-id19 . -3) (nil rear-nonsticky t 999 . 1000)) (25565 36624 918779 13000) 0 nil])
+([nil nil ((1025 . 1026)) nil (25565 36630 912743 383000) 0 nil])
+nil
+([nil nil ((nil rear-nonsticky nil 1052 . 1053) (nil fontified nil 1026 . 1053) (1026 . 1053)) nil (25565 36630 912739 87000) 0 nil])
+([nil nil ((1317 . 1320) (t 25565 36630 939554 426000)) nil (25565 36644 772269 512000) 0 nil])
+([nil nil ((#("  
+" 0 2 (fontified t ws-butler-chg chg) 2 3 (fontified t)) . 1318) (undo-tree-id30 . -3) (undo-tree-id31 . -2) (undo-tree-id32 . -3)) nil (25565 36644 772267 805000) 0 nil])
+([nil current ((#("  :commands (lsp-ui-peek-find-definitions lsp-ui-peek-find-references)
+" 0 2 (fontified t) 2 11 (fontified t face font-lock-builtin-face) 11 12 (fontified t) 12 13 (fontified t) 13 40 (fontified t) 40 41 (fontified t rear-nonsticky t) 41 42 (fontified t) 42 68 (fontified t) 68 69 (fontified t rear-nonsticky t) 69 70 (fontified t) 70 71 (fontified t)) . 984) (undo-tree-id20 . -71) (undo-tree-id21 . -13) (undo-tree-id22 . -13) (undo-tree-id23 . -13) (undo-tree-id24 . -13) (undo-tree-id25 . -42) (undo-tree-id26 . -69) (undo-tree-id27 . -69) (undo-tree-id28 . -42) (undo-tree-id29 . -71)) nil (25565 36644 772261 873000) 0 nil])
+nil

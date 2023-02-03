@@ -1,0 +1,330 @@
+(undo-tree-save-format-version . 1)
+"678bc4a4bec91af04725bffb09babeb3d3a41300"
+[nil nil nil nil (25565 35830 485820 53000) 0 nil]
+([nil nil ((1 . 4296) (t . -1)) nil (25565 35830 485818 786000) 0 nil])
+([nil nil ((#("C and C++" 0 9 (fontified t ws-butler-chg chg face font-lock-comment-face)) . 85) (undo-tree-id13 . -9) (undo-tree-id14 . -9) (undo-tree-id15 . -9)) nil (25565 35830 485817 653000) 0 nil])
+([nil nil ((85 . 87)) nil (25565 35830 485814 966000) 0 nil])
+([nil nil ((#("c-cpp" 0 5 (ws-butler-chg chg fontified t face font-lock-constant-face)) . 193) (undo-tree-id10 . -5) (undo-tree-id11 . -5) (undo-tree-id12 . -5) 195) nil (25565 35830 485814 117000) 0 nil])
+([nil nil ((193 . 195)) nil (25565 35830 485810 705000) 0 nil])
+([nil nil ((#("(c-add-style \"my-c-style\"
+             '((c-basic-offset . 4)
+               (c-offsets-alist
+                (access-label . /)
+                (arglist-cont . 0)
+                (arglist-intro . +)
+                (block-close . 0)
+                (case-label . 0)
+                (class-close . 0)
+                (defun-block-intro . +)
+                (defun-close . 0)
+                (inclass . +)
+                (inline-close . 0)
+                (innamespace . 0)
+                (member-init-intro . +)
+                (namespace-close . 0)
+                (statement . 0)
+                (statement-block-intro . +)
+                (statement-case-intro . +)
+                (statement-cont . +)
+                (topmost-intro . 0)
+                (annotation-top-cont . 0)
+                (annotation-var-cont . +)
+                (arglist-close . c-lineup-close-paren)
+                (arglist-cont-nonempty . c-lineup-arglist)
+                (block-open . 0)
+                (brace-entry-open . 0)
+                (brace-list-close . 0)
+                (brace-list-entry . 0)
+                (brace-list-intro . +)
+                (brace-list-open . +)
+                (c . c-lineup-C-comments)
+                (catch-clause . 0)
+                (class-open . 0)
+                (comment-intro . c-lineup-comment)
+                (composition-close . 0)
+                (composition-open . 0)
+                (cpp-define-intro c-lineup-cpp-define +)
+                (cpp-macro . -1000)
+                (cpp-macro-cont . +)
+                (defun-open . 0)
+                (do-while-closure . 0)
+                (else-clause . 0)
+                (extern-lang-close . 0)
+                (extern-lang-open . 0)
+                (friend . 0)
+                (func-decl-cont . +)
+                (incomposition . +)
+                (inexpr-class . +)
+                (inexpr-statement . +)
+                (inextern-lang . +)
+                (inher-cont . c-lineup-multi-inher)
+                (inher-intro . +)
+                (inlambda . 0)
+                (inline-open . +)
+                (inmodule . +)
+                (knr-argdecl . 0)
+                (knr-argdecl-intro . +)
+                (label . *)
+                (lambda-intro-cont . +)
+                (member-init-cont . c-lineup-multi-inher)
+                (module-close . 0)
+                (module-open . 0)
+                (namespace-open . 0)
+                (objc-method-args-cont . c-lineup-ObjC-method-args)
+                (objc-method-call-cont c-lineup-ObjC-method-call-colons
+                                       c-lineup-ObjC-method-call +)
+                (objc-method-intro . [0])
+                (statement-case-open . 0)
+                (stream-op . c-lineup-streamop)
+                (string . -1000)
+                (substatement . +)
+                (substatement-label . 2)
+                (substatement-open . 0)
+                (template-args-cont c-lineup-template-args +)
+                (topmost-intro-cont . c-lineup-topmost-intro-cont))))
+
+;; Interactively set the c style
+(defun set-my-c-style ()
+  \"Set my c style.\"
+  (interactive)
+  (c-set-style \"my-c-style\"))
+
+(add-hook 'c-mode-hook 'set-my-c-style)
+(add-hook 'c++-mode-hook 'set-my-c-style)
+
+;; =============================================================================
+;; Language configuration
+;; =============================================================================
+;; Use c++ mode for .h .tpp and .inl files extensions
+(add-to-list 'auto-mode-alist '(\"\\\\.h\\\\'\" . c++-mode))
+(add-to-list 'auto-mode-alist '(\"\\\\.tpp\\\\'\" . c++-mode))
+(add-to-list 'auto-mode-alist '(\"\\\\.inl\\\\'\" . c++-mode))
+
+;; Use ccls as language server
+;; @todo do I need the defer ?
+(use-package ccls :defer t)
+
+;; Format the file with clang format
+(use-package clang-format+
+  :hook
+  (c-mode . clang-format+-mode)
+  (c++-mode . clang-format+-mode))
+" 0 13 (ws-butler-chg chg fontified t) 13 25 (ws-butler-chg chg fontified t face font-lock-string-face) 25 101 (ws-butler-chg chg fontified t) 101 129 (ws-butler-chg chg fontified t) 129 209 (ws-butler-chg chg fontified t) 209 234 (ws-butler-chg chg fontified t) 234 314 (ws-butler-chg chg fontified t) 314 341 (ws-butler-chg chg fontified t) 341 629 (ws-butler-chg chg fontified t) 629 671 (ws-butler-chg chg fontified t) 671 734 (ws-butler-chg chg fontified t) 734 744 (ws-butler-chg chg fontified t) 744 841 (ws-butler-chg chg fontified t) 841 883 (ws-butler-chg chg fontified t) 883 1171 (ws-butler-chg chg fontified t) 1171 1211 (ws-butler-chg chg fontified t) 1211 1244 (ws-butler-chg chg fontified t) 1244 1246 (ws-butler-chg chg fontified t) 1246 1383 (ws-butler-chg chg fontified t) 1383 1409 (ws-butler-chg chg fontified t) 1409 1711 (ws-butler-chg chg fontified t) 1711 1724 (ws-butler-chg chg fontified t) 1724 1746 (ws-butler-chg chg fontified t) 1746 1753 (ws-butler-chg chg fontified t) 1753 1909 (ws-butler-chg chg fontified t) 1909 1936 (ws-butler-chg chg fontified t) 1936 2387 (ws-butler-chg chg) 2387 2887 (ws-butler-chg chg fontified t) 2887 2913 (ws-butler-chg chg fontified t) 2913 3046 (ws-butler-chg chg fontified t) 3046 3049 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3049 3079 (ws-butler-chg chg fontified t face font-lock-comment-face) 3079 3080 (ws-butler-chg chg fontified t) 3080 3085 (ws-butler-chg chg fontified t face font-lock-keyword-face) 3085 3086 (ws-butler-chg chg fontified t) 3086 3100 (ws-butler-chg chg fontified t face font-lock-function-name-face) 3100 3106 (ws-butler-chg chg fontified t) 3106 3123 (ws-butler-chg chg fontified t face font-lock-doc-face) 3123 3127 (ws-butler-chg chg fontified t) 3127 3138 (ws-butler-chg chg fontified t face font-lock-keyword-face) 3138 3155 (ws-butler-chg chg fontified t) 3155 3167 (ws-butler-chg chg fontified t face font-lock-string-face) 3167 3254 (ws-butler-chg chg fontified t) 3254 3257 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3257 3335 (ws-butler-chg chg fontified t face font-lock-comment-face) 3335 3338 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3338 3361 (ws-butler-chg chg fontified t face font-lock-comment-face) 3361 3364 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3364 3413 (ws-butler-chg chg fontified t face font-lock-comment-face) 3413 3442 (ws-butler-chg chg face font-lock-comment-face fontified t) 3442 3445 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3445 3496 (ws-butler-chg chg fontified t face font-lock-comment-face) 3496 3528 (ws-butler-chg chg fontified t) 3528 3537 (ws-butler-chg chg fontified t face font-lock-string-face) 3537 3583 (ws-butler-chg chg fontified t) 3583 3594 (ws-butler-chg chg fontified t face font-lock-string-face) 3594 3640 (ws-butler-chg chg fontified t) 3640 3651 (ws-butler-chg chg fontified t face font-lock-string-face) 3651 3666 (ws-butler-chg chg fontified t) 3666 3669 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3669 3697 (ws-butler-chg chg fontified t face font-lock-comment-face) 3697 3700 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3700 3728 (ws-butler-chg chg fontified t face font-lock-comment-face) 3728 3729 (ws-butler-chg chg fontified t) 3729 3740 (ws-butler-chg chg fontified t face font-lock-keyword-face) 3740 3741 (ws-butler-chg chg fontified t) 3741 3745 (ws-butler-chg chg fontified t face font-lock-constant-face) 3745 3746 (ws-butler-chg chg fontified t) 3746 3752 (ws-butler-chg chg fontified t face font-lock-builtin-face) 3752 3757 (ws-butler-chg chg fontified t) 3757 3760 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 3760 3794 (ws-butler-chg chg fontified t face font-lock-comment-face) 3794 3795 (ws-butler-chg chg fontified t) 3795 3806 (ws-butler-chg chg fontified t face font-lock-keyword-face) 3806 3807 (ws-butler-chg chg fontified t) 3807 3820 (ws-butler-chg chg fontified t face font-lock-constant-face) 3820 3823 (ws-butler-chg chg fontified t) 3823 3828 (ws-butler-chg chg fontified t face font-lock-builtin-face) 3828 3861 (ws-butler-chg chg fontified t) 3861 3896 (ws-butler-chg chg fontified t)) . -390) (undo-tree-id2 . -3896) (undo-tree-id3 . -3896) (undo-tree-id4 . -2387) (undo-tree-id5 . -3896) (undo-tree-id6 . -3896) (undo-tree-id7 . -3896) (undo-tree-id8 . -3896) (undo-tree-id9 . -3896) 4286) nil (25565 35830 485809 4000) 0 nil])
+([nil nil ((#("Style configuration" 0 19 (ws-butler-chg chg fontified t face font-lock-comment-face)) . -289) (undo-tree-id0 . -19) (undo-tree-id1 . -19)) nil (25565 35830 485801 969000) 0 nil])
+([nil nil ((289 . 308)) nil (25565 35830 485769 775000) 0 nil])
+([nil nil ((195 . 199) (t 25565 35830 507517 786000)) nil (25565 36235 360551 306000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 4764 . 4765) (nil fontified nil 4750 . 4765) (nil fontified nil 4739 . 4750) (nil fontified nil 4735 . 4739) (nil fontified nil 4733 . 4735) (nil fontified nil 4721 . 4733) (nil fontified nil 4719 . 4721) (nil fontified nil 4712 . 4719) (nil fontified nil 4667 . 4712) (nil fontified nil 4661 . 4667) (nil fontified nil 4660 . 4661) (nil fontified nil 4659 . 4660) (nil fontified nil 4658 . 4659) (nil fontified nil 4656 . 4658) (nil fontified nil 4649 . 4656) (nil fontified nil 4648 . 4649) (nil fontified nil 4641 . 4648) (nil fontified nil 4640 . 4641) (nil fontified nil 4638 . 4640) (nil fontified nil 4635 . 4638) (nil fontified nil 4634 . 4635) (nil fontified nil 4630 . 4634) (nil fontified nil 4626 . 4630) (nil fontified nil 4590 . 4626) (nil fontified nil 4584 . 4590) (nil fontified nil 4583 . 4584) (nil fontified nil 4579 . 4583) (nil fontified nil 4578 . 4579) (nil fontified nil 4576 . 4578) (nil fontified nil 4568 . 4576) (nil fontified nil 4567 . 4568) (nil fontified nil 4565 . 4567) (nil fontified nil 4560 . 4565) (nil fontified nil 4559 . 4560) (nil fontified nil 4557 . 4559) (nil fontified nil 4552 . 4557) (nil fontified nil 4551 . 4552) (nil fontified nil 4549 . 4551) (nil fontified nil 4541 . 4549) (nil fontified nil 4540 . 4541) (nil fontified nil 4538 . 4540) (nil fontified nil 4534 . 4538) (nil fontified nil 4533 . 4534) (nil fontified nil 4531 . 4533) (nil fontified nil 4527 . 4531) (nil fontified nil 4526 . 4527) (nil fontified nil 4524 . 4526) (nil fontified nil 4522 . 4524) (nil fontified nil 4521 . 4522) (nil fontified nil 4519 . 4521) (nil fontified nil 4516 . 4519) (nil fontified nil 4515 . 4516) (nil fontified nil 4513 . 4515) (nil fontified nil 4508 . 4513) (nil fontified nil 4507 . 4508) (nil fontified nil 4505 . 4507) (nil fontified nil 4499 . 4505) (nil fontified nil 4498 . 4499) (nil fontified nil 4494 . 4498) (nil fontified nil 4456 . 4494) (nil fontified nil 4453 . 4456) (nil fontified nil 4452 . 4453) (nil fontified nil 4450 . 4452) (nil fontified nil 4447 . 4450) (nil fontified nil 4446 . 4447) (nil fontified nil 4445 . 4446) (nil fontified nil 4444 . 4445) (nil fontified nil 4442 . 4444) (nil fontified nil 4439 . 4442) (nil fontified nil 4381 . 4439) (nil fontified nil 4375 . 4381) (nil fontified nil 4372 . 4375) (nil fontified nil 4343 . 4372) (nil fontified nil 4338 . 4343) (nil fontified nil 4329 . 4338) (nil fontified nil 4328 . 4329) (nil fontified nil 4317 . 4328) (nil fontified nil 4309 . 4317) (nil fontified nil 4289 . 4309) (nil fontified nil 4288 . 4289) (nil fontified nil 4281 . 4288) (nil fontified nil 4256 . 4281) (nil fontified nil 4252 . 4256) (nil fontified nil 4250 . 4252) (nil fontified nil 4217 . 4250) (nil fontified nil 4083 . 4217) (nil fontified nil 4079 . 4083) (nil fontified nil 4054 . 4079) (nil fontified nil 4053 . 4054) (nil fontified nil 4048 . 4053) (nil fontified nil 4047 . 4048) (nil fontified nil 3985 . 4047) (nil fontified nil 3982 . 3985) (nil fontified nil 3916 . 3982) (nil fontified nil 3913 . 3916) (nil fontified nil 3871 . 3913) (nil fontified nil 3820 . 3871) (nil fontified nil 3817 . 3820) (nil fontified nil 3816 . 3817) (nil fontified nil 3774 . 3816) (nil fontified nil 3771 . 3774) (nil fontified nil 3769 . 3771) (nil fontified nil 3764 . 3769) (nil fontified nil 3722 . 3764) (nil fontified nil 3717 . 3722) (nil fontified nil 3677 . 3717) (nil fontified nil 3673 . 3677) (nil fontified nil 3672 . 3673) (nil fontified nil 3647 . 3672) (nil fontified nil 3604 . 3647) (nil fontified nil 3556 . 3604) (nil fontified nil 3551 . 3556) (nil fontified nil 3523 . 3551) (nil fontified nil 3518 . 3523) (nil fontified nil 3492 . 3518) (nil fontified nil 3489 . 3492) (nil fontified nil 3488 . 3489) (nil fontified nil 3485 . 3488) (nil fontified nil 3478 . 3485) (nil fontified nil 3433 . 3478) (nil fontified nil 3419 . 3433) (nil fontified nil 3372 . 3419) (nil fontified nil 3365 . 3372) (nil fontified nil 3334 . 3365) (nil fontified nil 3329 . 3334) (nil fontified nil 3315 . 3329) (nil fontified nil 3310 . 3315) (nil fontified nil 3309 . 3310) (nil fontified nil 3245 . 3309) (nil fontified nil 3242 . 3245) (nil fontified nil 3211 . 3242) (nil fontified nil 3204 . 3211) (nil fontified nil 3177 . 3204) (nil fontified nil 3174 . 3177) (nil fontified nil 3173 . 3174) (nil fontified nil 3139 . 3173) (nil fontified nil 3123 . 3139) (nil fontified nil 3120 . 3123) (nil fontified nil 3052 . 3120) (nil fontified nil 3047 . 3052) (nil fontified nil 3019 . 3047) (nil fontified nil 3016 . 3019) (nil fontified nil 3015 . 3016) (nil fontified nil 2975 . 3015) (nil fontified nil 2972 . 2975) (nil fontified nil 2971 . 2972) (nil fontified nil 2920 . 2971) (nil fontified nil 2917 . 2920) (nil fontified nil 2890 . 2917) (nil fontified nil 2887 . 2890) (nil fontified nil 2853 . 2887) (nil fontified nil 2850 . 2853) (nil fontified nil 2817 . 2850) (nil fontified nil 2814 . 2817) (nil fontified nil 2812 . 2814) (nil fontified nil 2810 . 2812) (nil fontified nil 2805 . 2810) (nil fontified nil 2788 . 2805) (nil fontified nil 2771 . 2788) (nil fontified nil 2711 . 2771) (nil fontified nil 2694 . 2711) (nil fontified nil 2683 . 2694) (nil fontified nil 2668 . 2683) (nil fontified nil 2644 . 2668) (nil fontified nil 2639 . 2644) (nil fontified nil 2569 . 2639) (nil fontified nil 2564 . 2569) (nil fontified nil 2559 . 2564) (nil fontified nil 2551 . 2559) (nil fontified nil 2546 . 2551) (nil fontified nil 2536 . 2546) (nil fontified nil 2531 . 2536) (nil fontified nil 2507 . 2531) (nil fontified nil 2504 . 2507) (nil fontified nil 2503 . 2504) (nil fontified nil 2453 . 2503) (nil fontified nil 2450 . 2453) (nil fontified nil 2421 . 2450) (nil fontified nil 2418 . 2421) (nil fontified nil 2384 . 2418) (nil fontified nil 2381 . 2384) (nil fontified nil 2364 . 2381) (nil fontified nil 2351 . 2364) (nil fontified nil 2319 . 2351) (nil fontified nil 2312 . 2319) (nil fontified nil 2307 . 2312) (nil fontified nil 2300 . 2307) (nil fontified nil 2297 . 2300) (nil fontified nil 2290 . 2297) (nil fontified nil 2289 . 2290) (nil fontified nil 2278 . 2289) (nil fontified nil 2195 . 2278) (nil fontified nil 2183 . 2195) (nil fontified nil 2069 . 2183) (nil fontified nil 2056 . 2069) (nil fontified nil 2042 . 2056) (nil fontified nil 2038 . 2042) (nil fontified nil 1993 . 2038) (nil fontified nil 1987 . 1993) (nil fontified nil 1844 . 1987) (nil fontified nil 1842 . 1844) (nil fontified nil 1840 . 1842) (nil fontified nil 1838 . 1840) (nil fontified nil 1795 . 1838) (nil fontified nil 1792 . 1795) (nil fontified nil 1777 . 1792) (nil fontified nil 1766 . 1777) (nil fontified nil 1762 . 1766) (nil fontified nil 1695 . 1762) (nil fontified nil 1663 . 1695) (nil fontified nil 1556 . 1663) (nil fontified nil 1496 . 1556) (nil fontified nil 1484 . 1496) (nil fontified nil 1471 . 1484) (nil fontified nil 1392 . 1471) (nil fontified nil 1379 . 1392) (nil fontified nil 1343 . 1379) (nil fontified nil 1330 . 1343) (nil fontified nil 1122 . 1330) (nil fontified nil 1107 . 1122) (nil fontified nil 1077 . 1107) (nil fontified nil 1053 . 1077) (nil fontified nil 996 . 1053) (nil fontified nil 993 . 996) (nil fontified nil 992 . 993) (nil fontified nil 965 . 992) (nil fontified nil 812 . 965) (nil fontified nil 802 . 812) (nil fontified nil 766 . 802) (nil fontified nil 753 . 766) (nil fontified nil 649 . 753) (nil fontified nil 645 . 649) (nil fontified nil 579 . 645) (nil fontified nil 568 . 579) (nil fontified nil 559 . 568) (nil fontified nil 549 . 559) (nil fontified nil 539 . 549) (nil fontified nil 538 . 539) (nil fontified nil 533 . 538) (nil fontified nil 516 . 533) (nil fontified nil 510 . 516) (nil fontified nil 499 . 510) (nil fontified nil 494 . 499) (nil fontified nil 492 . 494) (nil fontified nil 491 . 492) (nil fontified nil 477 . 491) (nil fontified nil 472 . 477) (nil fontified nil 468 . 472) (nil fontified nil 431 . 468) (nil fontified nil 420 . 431) (nil fontified nil 405 . 420) (nil fontified nil 404 . 405) (nil fontified nil 395 . 404) (nil fontified nil 394 . 395) (394 . 4765)) nil (25565 36235 360538 163000) 0 nil])
+([nil nil ((#("\"Compile the program including the current buffer.  Default: run `make'.
+Runs COMMAND, a shell command, in a separate process asynchronously
+with output going to the buffer `*compilation*'.
+
+You can then use the command \\\\[next-error] to find the next error message
+and move to the source code that caused it.
+
+If optional second arg COMINT is t the buffer will be in Comint mode with
+`compilation-shell-minor-mode'.
+
+Interactively, prompts for the command if the variable
+`compilation-read-command' is non-nil; otherwise uses `compile-command'.
+With prefix arg, always prompts.
+Additionally, with universal prefix arg, compilation buffer will be in
+comint mode, i.e. interactive.
+
+To run more than one compilation at once, start one then rename
+the `*compilation*' buffer to some other name with
+\\\\[rename-buffer].  Then _switch buffers_ and start the new compilation.
+It will create a new `*compilation*' buffer.
+
+On most systems, termination of the main compilation process
+kills its subprocesses.
+
+The name used for the buffer is actually whatever is returned by
+the function in `compilation-buffer-name-function', so you can set that
+to a function that generates a unique name.\"" 0 66 (ws-butler-chg chg fontified t face font-lock-doc-face) 66 70 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 70 174 (ws-butler-chg chg fontified t face font-lock-doc-face) 174 187 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 187 223 (ws-butler-chg chg fontified t face font-lock-doc-face) 223 233 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 233 315 (ws-butler-chg chg fontified t face font-lock-doc-face) 315 385 (ws-butler-chg chg fontified t face font-lock-doc-face) 385 386 (ws-butler-chg chg fontified t face font-lock-doc-face) 386 413 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 413 414 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 414 417 (ws-butler-chg chg fontified t face font-lock-doc-face) 417 474 (ws-butler-chg chg fontified t face font-lock-doc-face) 474 498 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 498 528 (ws-butler-chg chg fontified t face font-lock-doc-face) 528 543 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 543 751 (ws-butler-chg chg fontified t face font-lock-doc-face) 751 764 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 764 800 (ws-butler-chg chg fontified t face font-lock-doc-face) 800 813 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 813 885 (ws-butler-chg chg fontified t face font-lock-doc-face) 885 892 (ws-butler-chg chg fontified t face font-lock-doc-face) 892 905 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 905 915 (ws-butler-chg chg fontified t face font-lock-doc-face) 915 917 (ws-butler-chg chg fontified t face font-lock-doc-face) 917 977 (ws-butler-chg chg fontified t face font-lock-doc-face) 977 1084 (ws-butler-chg chg fontified t face font-lock-doc-face) 1084 1116 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 1116 1183 (ws-butler-chg chg fontified t face font-lock-doc-face)) . -579) (undo-tree-id145 . -1183) (undo-tree-id146 . -1139) (undo-tree-id147 . -1183) (undo-tree-id148 . -1139) 1762) nil (25565 36235 360491 243000) 0 nil])
+([nil nil ((579 . 581) (#("\"" 0 1 (ws-butler-chg chg fontified nil)) . -579) (579 . 580)) nil (25565 36235 360487 720000) 0 nil])
+([nil nil ((580 . 583)) nil (25565 36235 360486 576000) 0 nil])
+([nil nil ((#("g" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -580) (undo-tree-id139 . -1) (undo-tree-id140 . -1) (#("o" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -581) (undo-tree-id141 . -1) (undo-tree-id142 . -1) (#(" " 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -582) (undo-tree-id143 . -1) (undo-tree-id144 . -1) 583) nil (25565 36235 360484 897000) 0 nil])
+([nil nil ((580 . 582)) nil (25565 36235 360478 599000) 0 nil])
+([nil nil ((#(" " 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -581) (undo-tree-id137 . -1) (undo-tree-id138 . -1) 582) nil (25565 36235 360477 665000) 0 nil])
+([nil nil ((581 . 602)) nil (25565 36235 360475 29000) 0 nil])
+([nil nil ((602 . 608)) nil (25565 36235 360474 356000) 0 nil])
+([nil nil ((#(" " 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -604) (undo-tree-id132 . -1) (undo-tree-id133 . -1) (#("o" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -605) (undo-tree-id134 . -1) (#("m" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -606) (undo-tree-id135 . -1) (#("p" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -607) (undo-tree-id136 . -1) 608) nil (25565 36235 360472 792000) 0 nil])
+([nil nil ((604 . 605)) nil (25565 36235 360468 398000) 0 nil])
+([nil nil ((606 . 615) (605 . 607)) nil (25565 36235 360467 726000) 0 nil])
+([nil nil ((#("'" 0 1 (fontified t ws-butler-chg delete face font-lock-doc-face)) . 614) (#("'" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . 614)) nil (25565 36235 360466 596000) 0 nil])
+([nil nil ((614 . 622)) nil (25565 36235 360465 683000) 0 nil])
+([nil nil ((#("`" 0 1 (fontified t ws-butler-chg chg face font-lock-doc-face)) . -613) (undo-tree-id131 . -1) 614) nil (25565 36235 360464 621000) 0 nil])
+([nil nil ((613 . 614)) nil (25565 36235 360463 251000) 0 nil])
+([nil nil ((622 . 623)) nil (25565 36235 360462 609000) 0 nil])
+([nil nil ((623 . 633)) nil (25565 36235 360461 915000) 0 nil])
+([nil nil ((633 . 634)) nil (25565 36235 360461 279000) 0 nil])
+([nil nil ((#(";; ;; (defun auto-complete-for-go ()
+;; ;;   (auto-complete-mode 1))
+;; ;; (add-hook 'go-mode-hook 'auto-complete-for-go)
+
+;; (use-package company-go
+;;   :demand t
+;;   :config
+;;   (setq company-go-gocode-command (concat (getenv \"HOME\") \"/go/bin/gocode\"))
+;;   (add-hook 'go-mode-hook
+;;             (lambda ()
+;;               (set (make-local-variable 'company-backends) '(company-go))
+;;               (company-mode)))
+;;   )
+
+
+;; ;; (use-package go-autocomplete)
+;; ;; (defun auto-complete-for-go ()
+;; ;; (auto-complete-mode 1))
+;; ;;  (add-hook 'go-mode-hook 'auto-complete-for-go)
+
+;; (add-hook 'go-mode-hook 'flycheck-mode)
+
+;; (defun gofmt-before-save ()
+;;   \"Add this to .emacs to run gofmt on the current buffer when saving:
+;; \\(add-hook 'before-save-hook 'gofmt-before-save).
+
+;; Note that this will cause ‘go-mode’ to get loaded the first time
+;; you save any file, kind of defeating the point of autoloading.\"
+
+;;   (interactive)
+;;   (when (eq major-mode 'go-mode)
+;;     (progn (let ((gofmt-command \"gofmt\")) (gofmt))
+;;            (let ((gofmt-command \"goimports\")) (gofmt)))
+;;     ))
+
+;; (defun my-go-mode-hook ()
+;;   \"Call Gofmt before saving.\"
+;;   (add-hook 'before-save-hook 'gofmt-before-save)
+;;                                         ; Godef jump key binding
+;;   (local-set-key (kbd \"M-.\") 'godef-jump)
+;;   (local-set-key (kbd \"M-*\") 'pop-tag-mark)
+;;   )
+;; (add-hook 'go-mode-hook 'my-go-mode-hook)
+
+;; (setq godef-command \"/home/brignone/go/bin/godef\")
+
+(add-hook 'go-mode-hook #'lsp-deferred)
+
+;; Set up before-save hooks to format buffer and add/delete imports.
+;; Make sure you don't have other gofmt/goimports hooks enabled.
+" 0 3 (ws-butler-chg chg face font-lock-comment-delimiter-face) 3 37 (ws-butler-chg chg face font-lock-comment-face) 37 40 (ws-butler-chg chg face font-lock-comment-delimiter-face) 40 69 (ws-butler-chg chg face font-lock-comment-face) 69 72 (ws-butler-chg chg face font-lock-comment-delimiter-face) 72 122 (ws-butler-chg chg face font-lock-comment-face) 122 123 (ws-butler-chg chg) 123 126 (ws-butler-chg chg face font-lock-comment-delimiter-face) 126 150 (ws-butler-chg chg face font-lock-comment-face) 150 152 (ws-butler-chg chg face font-lock-comment-delimiter-face) 152 155 (ws-butler-chg chg face font-lock-comment-delimiter-face) 155 165 (ws-butler-chg chg face font-lock-comment-face) 165 170 (ws-butler-chg chg face font-lock-comment-delimiter-face) 170 178 (ws-butler-chg chg face font-lock-comment-face) 178 183 (ws-butler-chg chg face font-lock-comment-delimiter-face) 183 188 (ws-butler-chg chg face font-lock-comment-face) 188 258 (ws-butler-chg chg face font-lock-comment-face) 258 263 (ws-butler-chg chg face font-lock-comment-delimiter-face) 263 287 (ws-butler-chg chg face font-lock-comment-face) 287 302 (ws-butler-chg chg face font-lock-comment-delimiter-face) 302 313 (ws-butler-chg chg face font-lock-comment-face) 313 330 (ws-butler-chg chg face font-lock-comment-delimiter-face) 330 390 (ws-butler-chg chg face font-lock-comment-face) 390 394 (ws-butler-chg chg face font-lock-comment-delimiter-face) 394 407 (ws-butler-chg chg face font-lock-comment-delimiter-face) 407 424 (ws-butler-chg chg face font-lock-comment-face) 424 429 (ws-butler-chg chg face font-lock-comment-delimiter-face) 429 431 (ws-butler-chg chg face font-lock-comment-face) 431 433 (ws-butler-chg chg) 433 436 (ws-butler-chg chg face font-lock-comment-delimiter-face) 436 469 (ws-butler-chg chg face font-lock-comment-face) 469 472 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 472 506 (ws-butler-chg chg fontified t face font-lock-comment-face) 506 509 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 509 536 (ws-butler-chg chg fontified t face font-lock-comment-face) 536 539 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 539 590 (ws-butler-chg chg fontified t face font-lock-comment-face) 590 591 (ws-butler-chg chg fontified t) 591 594 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 594 634 (ws-butler-chg chg fontified t face font-lock-comment-face) 634 635 (ws-butler-chg chg fontified t) 635 638 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 638 665 (ws-butler-chg chg fontified t face font-lock-comment-face) 665 666 (ws-butler-chg chg fontified t face font-lock-comment-face) 666 671 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 671 739 (ws-butler-chg chg fontified t face font-lock-comment-face) 739 742 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 742 758 (ws-butler-chg chg fontified t face font-lock-comment-face) 758 792 (ws-butler-chg chg fontified t face font-lock-comment-face) 792 793 (ws-butler-chg chg fontified t) 793 796 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 796 823 (ws-butler-chg chg fontified t face font-lock-comment-face) 823 830 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-comment-face)) 830 861 (ws-butler-chg chg fontified t face font-lock-comment-face) 861 864 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 864 924 (ws-butler-chg chg fontified t face font-lock-comment-face) 924 928 (ws-butler-chg chg fontified t face font-lock-comment-face) 928 929 (ws-butler-chg chg fontified t) 929 934 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 934 948 (ws-butler-chg chg fontified t face font-lock-comment-face) 948 953 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 953 969 (ws-butler-chg chg fontified t face font-lock-comment-face) 969 984 (ws-butler-chg chg face font-lock-comment-face fontified t) 984 991 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 991 1038 (ws-butler-chg chg fontified t face font-lock-comment-face) 1038 1052 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1052 1097 (ws-butler-chg chg fontified t face font-lock-comment-face) 1097 1104 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1104 1107 (ws-butler-chg chg fontified t face font-lock-comment-face) 1107 1108 (ws-butler-chg chg fontified t) 1108 1111 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1111 1137 (ws-butler-chg chg fontified t face font-lock-comment-face) 1137 1142 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1142 1170 (ws-butler-chg chg fontified t face font-lock-comment-face) 1170 1175 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1175 1223 (ws-butler-chg chg fontified t face font-lock-comment-face) 1223 1266 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1266 1291 (ws-butler-chg chg fontified t face font-lock-comment-face) 1291 1292 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1292 1296 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1296 1336 (ws-butler-chg chg fontified t face font-lock-comment-face) 1336 1341 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1341 1383 (ws-butler-chg chg fontified t face font-lock-comment-face) 1383 1388 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1388 1390 (ws-butler-chg chg fontified t face font-lock-comment-face) 1390 1393 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1393 1428 (ws-butler-chg chg fontified t face font-lock-comment-face) 1428 1435 (ws-butler-chg chg fontified t face font-lock-comment-face) 1435 1436 (ws-butler-chg chg fontified t) 1436 1439 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1439 1484 (ws-butler-chg chg fontified t face font-lock-comment-face) 1484 1490 (ws-butler-chg chg face font-lock-comment-face fontified t) 1490 1532 (ws-butler-chg chg fontified t) 1532 1535 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1535 1601 (ws-butler-chg chg fontified t face font-lock-comment-face) 1601 1604 (ws-butler-chg chg fontified t face font-lock-comment-delimiter-face) 1604 1666 (ws-butler-chg chg fontified t face font-lock-comment-face)) . -1254) (undo-tree-id125 . -469) (undo-tree-id126 . -1666) (undo-tree-id127 . -1666) (undo-tree-id128 . -1666) (undo-tree-id129 . -1666) (undo-tree-id130 . -1666) 2920) nil (25565 36235 360460 62000) 0 nil])
+([nil nil ((394 . 395)) nil (25565 36235 360455 597000) 0 nil])
+([nil nil ((394 . 397)) nil (25565 36235 360454 952000) 0 nil])
+([nil nil ((397 . 405)) nil (25565 36235 360454 290000) 0 nil])
+([nil nil ((#("e" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -403) (undo-tree-id121 . -1) (undo-tree-id122 . -1) (#("i" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -404) (undo-tree-id123 . -1) (undo-tree-id124 . -1) 405) nil (25565 36235 360452 775000) 0 nil])
+([nil nil ((403 . 407)) nil (25565 36235 360449 53000) 0 nil])
+([nil nil ((#("l" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -403) (undo-tree-id117 . -1) (#("i" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -404) (undo-tree-id118 . -1) (#("n" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -405) (undo-tree-id119 . -1) (#("g" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -406) (undo-tree-id120 . -1) 407) nil (25565 36235 360447 603000) 0 nil])
+([nil nil ((403 . 409)) nil (25565 36235 360443 881000) 0 nil])
+([nil nil ((#("(use-package go-mode
+  :demand t
+  :config
+  (define-key go-mode-map (kbd \"C-x RET RET\") 'go-compile))" 0 1 (ws-butler-chg chg fontified t) 1 12 (ws-butler-chg chg fontified t face font-lock-keyword-face) 12 13 (ws-butler-chg chg fontified t) 13 20 (ws-butler-chg chg fontified t face font-lock-constant-face) 20 23 (ws-butler-chg chg fontified t) 23 30 (ws-butler-chg chg fontified t face font-lock-builtin-face) 30 35 (ws-butler-chg chg fontified t) 35 42 (ws-butler-chg chg fontified t face font-lock-builtin-face) 42 74 (ws-butler-chg chg fontified t) 74 87 (ws-butler-chg chg fontified t face font-lock-string-face) 87 102 (ws-butler-chg chg fontified t)) . 1166) (undo-tree-id106 . -102) (undo-tree-id107 . -21) (undo-tree-id108 . -15) (undo-tree-id109 . 102) (undo-tree-id110 . -1) (undo-tree-id111 . 1) (undo-tree-id112 . -102) (undo-tree-id113 . -15) (undo-tree-id114 . -102) (undo-tree-id115 . -102) (undo-tree-id116 . -102)) nil (25565 36235 360442 627000) 0 nil])
+([nil nil ((410 . 411)) nil (25565 36235 360435 838000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 511 . 512) (nil fontified nil 497 . 512) (nil fontified nil 484 . 497) (nil fontified nil 452 . 484) (nil fontified nil 445 . 452) (nil fontified nil 440 . 445) (nil fontified nil 433 . 440) (nil fontified nil 430 . 433) (nil fontified nil 423 . 430) (nil fontified nil 422 . 423) (nil fontified nil 411 . 422) (nil fontified nil 410 . 411) (410 . 512)) nil (25565 36235 360434 543000) 0 nil])
+([nil nil ((#("(defcustom gobuild-command (purecopy \"go build -v && go test -v && go vet\")
+  \"Go build command.\"
+  :type 'string
+  :group 'compilation)
+
+(defun go-compile (command &optional comint)
+  \"An implementation of the `compile' command for golang.\"
+  (interactive
+   (list
+    (let ((command (eval gobuild-command)))
+      (if (or compilation-read-command current-prefix-arg)
+	        (compilation-read-command command)
+	      command))
+    (consp current-prefix-arg)))
+  (unless (equal command (eval gobuild-command))
+    (setq gobuild-command command))
+  (save-some-buffers (not compilation-ask-about-save)
+                     compilation-save-buffers-predicate)
+  (setq-default compilation-directory default-directory)
+  (compilation-start command comint))" 0 1 (ws-butler-chg chg fontified t) 1 10 (ws-butler-chg chg fontified t face font-lock-keyword-face) 10 11 (ws-butler-chg chg fontified t) 11 26 (ws-butler-chg chg fontified t face font-lock-variable-name-face) 26 37 (ws-butler-chg chg fontified t) 37 74 (ws-butler-chg chg fontified t face font-lock-string-face) 74 76 (ws-butler-chg chg fontified t) 76 78 (ws-butler-chg chg fontified t) 78 83 (ws-butler-chg chg fontified t face font-lock-doc-face) 83 97 (ws-butler-chg chg fontified t face font-lock-doc-face) 97 98 (ws-butler-chg chg fontified t) 98 100 (ws-butler-chg chg fontified t) 100 105 (ws-butler-chg chg fontified t face font-lock-builtin-face) 105 116 (ws-butler-chg chg fontified t) 116 122 (ws-butler-chg chg fontified t face font-lock-builtin-face) 122 139 (ws-butler-chg chg fontified t) 139 144 (ws-butler-chg chg fontified t face font-lock-keyword-face) 144 145 (ws-butler-chg chg fontified t) 145 155 (ws-butler-chg chg fontified t face font-lock-function-name-face) 155 165 (ws-butler-chg chg fontified t) 165 174 (ws-butler-chg chg fontified t face font-lock-type-face) 174 183 (ws-butler-chg chg fontified t) 183 185 (ws-butler-chg chg fontified t) 185 212 (ws-butler-chg chg fontified t face font-lock-doc-face) 212 219 (ws-butler-chg chg fontified t face (font-lock-constant-face font-lock-doc-face)) 219 220 (ws-butler-chg chg fontified t face font-lock-doc-face) 220 221 (ws-butler-chg delete fontified t face font-lock-doc-face) 221 240 (ws-butler-chg chg fontified t face font-lock-doc-face) 240 241 (ws-butler-chg delete fontified t face font-lock-doc-face) 241 242 (fontified t) 242 245 (ws-butler-chg chg fontified t) 245 256 (ws-butler-chg chg fontified t face font-lock-keyword-face) 256 271 (ws-butler-chg chg fontified t) 271 274 (ws-butler-chg chg fontified t face font-lock-keyword-face) 274 317 (ws-butler-chg chg fontified t) 317 319 (ws-butler-chg chg fontified t face font-lock-keyword-face) 319 321 (ws-butler-chg chg fontified t) 321 323 (ws-butler-chg chg fontified t face font-lock-keyword-face) 323 466 (ws-butler-chg chg fontified t) 466 472 (ws-butler-chg chg fontified t face font-lock-keyword-face) 472 473 (ws-butler-chg chg fontified t) 473 500 (ws-butler-chg chg fontified t) 500 512 (ws-butler-chg chg fontified t) 512 517 (ws-butler-chg chg fontified t) 517 521 (ws-butler-chg chg fontified t face font-lock-keyword-face) 521 535 (ws-butler-chg chg fontified t) 535 548 (ws-butler-chg chg fontified t) 548 576 (ws-butler-chg chg fontified t) 576 602 (ws-butler-chg chg fontified t) 602 662 (ws-butler-chg chg fontified t) 662 674 (ws-butler-chg chg fontified t face font-lock-keyword-face) 674 742 (ws-butler-chg chg fontified t) 742 753 (ws-butler-chg chg fontified t)) . 513) (undo-tree-id96 . -753) (undo-tree-id97 . -76) (undo-tree-id98 . -185) (undo-tree-id99 . -185) (undo-tree-id100 . 753) (undo-tree-id101 . -1) (undo-tree-id102 . 618) (undo-tree-id103 . -136) (undo-tree-id104 . -136) (undo-tree-id105 . -753)) nil (25565 36235 360431 116000) 0 nil])
+([nil nil ((442 . 445)) nil (25565 36235 360379 457000) 0 nil])
+([nil nil ((445 . 446)) nil (25565 36235 360378 844000) 0 nil])
+([nil nil ((446 . 450)) nil (25565 36235 360378 254000) 0 nil])
+([nil nil ((450 . 453)) nil (25565 36235 360377 602000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1205 . 1206) (nil fontified nil 1195 . 1206) (nil fontified nil 1127 . 1195) (nil fontified nil 1115 . 1127) (nil fontified nil 1055 . 1115) (nil fontified nil 1029 . 1055) (nil fontified nil 1001 . 1029) (nil fontified nil 988 . 1001) (nil fontified nil 974 . 988) (nil fontified nil 970 . 974) (nil fontified nil 965 . 970) (nil fontified nil 953 . 965) (nil fontified nil 926 . 953) (nil fontified nil 925 . 926) (nil fontified nil 919 . 925) (nil fontified nil 776 . 919) (nil fontified nil 774 . 776) (nil fontified nil 772 . 774) (nil fontified nil 770 . 772) (nil fontified nil 727 . 770) (nil fontified nil 724 . 727) (nil fontified nil 709 . 724) (nil fontified nil 698 . 709) (nil fontified nil 695 . 698) (nil fontified nil 694 . 695) (nil fontified nil 693 . 694) (nil fontified nil 674 . 693) (nil fontified nil 673 . 674) (nil fontified nil 672 . 673) (nil fontified nil 665 . 672) (nil fontified nil 638 . 665) (nil fontified nil 636 . 638) (nil fontified nil 627 . 636) (nil fontified nil 618 . 627) (nil fontified nil 608 . 618) (nil fontified nil 598 . 608) (nil fontified nil 597 . 598) (nil fontified nil 592 . 597) (nil fontified nil 575 . 592) (nil fontified nil 569 . 575) (nil fontified nil 558 . 569) (nil fontified nil 553 . 558) (nil fontified nil 551 . 553) (nil fontified nil 550 . 551) (nil fontified nil 536 . 550) (nil fontified nil 531 . 536) (nil fontified nil 529 . 531) (nil fontified nil 527 . 529) (nil fontified nil 490 . 527) (nil fontified nil 479 . 490) (nil fontified nil 464 . 479) (nil fontified nil 463 . 464) (nil fontified nil 454 . 463) (nil fontified nil 453 . 454) (453 . 1206)) nil (25565 36235 360374 288000) 0 nil])
+([nil nil ((#(";; Compiling go
+" 0 3 (fontified t ws-butler-chg chg face font-lock-comment-delimiter-face) 3 15 (fontified t ws-butler-chg chg face font-lock-comment-face) 15 16 (fontified t ws-butler-chg delete face font-lock-comment-face)) . 394) (undo-tree-id91 . -16) (undo-tree-id92 . 1) (undo-tree-id93 . -16) (undo-tree-id94 . -16) (undo-tree-id95 . -16)) nil (25565 36235 360365 168000) 0 nil])
+([nil nil ((434 . 437)) nil (25565 36235 360361 725000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 452 . 453) (nil fontified nil 452 . 453) (nil fontified nil 440 . 452) (nil fontified nil 437 . 440) (437 . 453)) nil (25565 36235 360360 875000) 0 nil])
+([nil nil ((#("
+" 0 1 (ws-butler-chg chg fontified t)) . 453) (undo-tree-id88 . -1) (undo-tree-id89 . 1) (undo-tree-id90 . -1)) nil (25565 36235 360359 420000) 0 nil])
+([nil nil ((1195 . 1197) (1136 . 1138) (1096 . 1098) (1021 . 1023) (985 . 987) (932 . 934) (899 . 901) (#("    " 0 4 (ws-butler-chg chg fontified t)) . -885) (#("    " 0 4 (ws-butler-chg chg fontified t)) . -847) (781 . 789) (#("      " 0 6 (ws-butler-chg chg fontified t)) . 781) (739 . 741) (727 . 729) (709 . 711) (648 . 650) (599 . 601) (575 . 577) (557 . 559) (533 . 535) 394) nil (25565 36235 360355 819000) 0 nil])
+([nil nil ((1232 . 1235)) nil (25565 36235 360352 774000) 0 nil])
+([nil nil ((#("  " 0 2 (ws-butler-chg chg fontified t)) . -1233) (undo-tree-id86 . -2) (undo-tree-id87 . -2) 1235) nil (25565 36235 360351 802000) 0 nil])
+([nil nil ((#("
+
+" 0 1 (ws-butler-chg delete fontified t) 1 2 (ws-butler-chg chg fontified t)) . -1305) (undo-tree-id80 . -2) (undo-tree-id81 . -2) (#("
+
+" 0 1 (ws-butler-chg delete fontified t) 1 2 (ws-butler-chg chg fontified t)) . 1304) (undo-tree-id82 . -2) (undo-tree-id83 . -2) (undo-tree-id84 . -2) (undo-tree-id85 . -2) 1306) nil (25565 36235 360349 269000) 0 nil])
+([nil nil ((1304 . 1305)) nil (25565 36235 360344 687000) 0 nil])
+([nil nil ((1305 . 1308)) nil (25565 36235 360344 70000) 0 nil])
+([nil nil ((1308 . 1316)) nil (25565 36235 360343 303000) 0 nil])
+([nil nil ((#(" " 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -1314) (undo-tree-id76 . -1) (undo-tree-id77 . -1) (#("l" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -1315) (undo-tree-id78 . -1) (undo-tree-id79 . -1) 1316) nil (25565 36235 360342 207000) 0 nil])
+([nil nil ((1314 . 1315)) nil (25565 36235 360338 943000) 0 nil])
+([nil nil ((#("g" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -1314) (undo-tree-id75 . -1) 1315) nil (25565 36235 360338 123000) 0 nil])
+([nil nil ((1314 . 1325)) nil (25565 36235 360336 804000) 0 nil])
+([nil nil ((1475 . 1476)) nil (25565 36235 360336 168000) 0 nil])
+([nil nil ((1476 . 1478)) nil (25565 36235 360335 550000) 0 nil])
+([nil nil ((1325 . 1326)) nil (25565 36235 360334 903000) 0 nil])
+([nil nil ((1327 . 1330) (1326 . 1328)) nil (25565 36235 360334 202000) 0 nil])
+([nil nil ((#("d" 0 1 (fontified t ws-butler-chg chg)) . -1329) (undo-tree-id73 . -1) (undo-tree-id74 . -1) 1330) nil (25565 36235 360333 216000) 0 nil])
+([nil nil ((1329 . 1347)) nil (25565 36235 360331 314000) 0 nil])
+([nil nil ((#(")" 0 1 (fontified t ws-butler-chg delete)) . 1347) (undo-tree-id71 . 1) (undo-tree-id72 . 1)) nil (25565 36235 360330 456000) 0 nil])
+([nil nil ((#("(with-eval-after-load
+" 0 1 (fontified t ws-butler-chg chg) 1 21 (fontified t ws-butler-chg chg face font-lock-keyword-face) 21 22 (fontified t ws-butler-chg delete)) . 1326) (undo-tree-id58 . -22) (undo-tree-id59 . -22) (undo-tree-id60 . -22) (undo-tree-id61 . -22) (undo-tree-id62 . -22) (undo-tree-id63 . -22) (undo-tree-id64 . -22) (undo-tree-id65 . -22) (undo-tree-id66 . -21) (undo-tree-id67 . -22) (undo-tree-id68 . 22) (undo-tree-id69 . -1) (undo-tree-id70 . -22)) nil (25565 36235 360327 110000) 0 nil])
+([nil nil ((#("()" 0 2 (ws-butler-chg chg fontified t)) . -1476) (undo-tree-id22 . -1) (undo-tree-id23 . -1) (undo-tree-id24 . -1) (undo-tree-id25 . -1) (undo-tree-id26 . -1) (undo-tree-id27 . -1) (undo-tree-id28 . -1) (undo-tree-id29 . -1) (undo-tree-id30 . -1) (undo-tree-id31 . -1) (undo-tree-id32 . -1) (undo-tree-id33 . -1) (undo-tree-id34 . -1) (undo-tree-id35 . -1) (undo-tree-id36 . -1) (undo-tree-id37 . -1) (undo-tree-id38 . -1) (undo-tree-id39 . -1) (undo-tree-id40 . -1) (undo-tree-id41 . -1) (undo-tree-id42 . -1) (undo-tree-id43 . -1) (undo-tree-id44 . -1) (undo-tree-id45 . -1) (undo-tree-id46 . -1) (undo-tree-id47 . -1) (undo-tree-id48 . -1) (undo-tree-id49 . -1) (undo-tree-id50 . -1) (undo-tree-id51 . -1) (undo-tree-id52 . -2) (undo-tree-id53 . 2) (undo-tree-id54 . -1) (undo-tree-id55 . 1) (undo-tree-id56 . -2) (undo-tree-id57 . -2) 1478) nil (25565 36235 360314 993000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1497 . 1498) (nil fontified nil 1497 . 1498) (nil fontified nil 1477 . 1497) (nil fontified nil 1476 . 1477) (1476 . 1498)) nil (25565 36235 360292 748000) 0 nil])
+([nil nil ((1499 . 1503)) nil (25565 36235 360291 448000) 0 nil])
+([nil nil ((1498 . 1502)) nil (25565 36235 360290 813000) 0 nil])
+([nil nil ((1502 . 1504)) nil (25565 36235 360290 216000) 0 nil])
+([nil nil ((#("(" 0 1 (fontified nil ws-butler-chg chg)) . -1502) (undo-tree-id20 . -1) (undo-tree-id21 . -1) (#(")" 0 1 (fontified t ws-butler-chg chg)) . 1503)) nil (25565 36235 360289 197000) 0 nil])
+([nil nil ((1502 . 1506)) nil (25565 36235 360286 579000) 0 nil])
+([nil nil ((#("m" 0 1 (fontified t ws-butler-chg chg)) . -1505) (undo-tree-id18 . -1) (undo-tree-id19 . -1) 1506) nil (25565 36235 360285 725000) 0 nil])
+([nil nil ((1505 . 1513)) nil (25565 36235 360283 399000) 0 nil])
+([nil nil ((1570 . 1571) (#(")" 0 1 (ws-butler-chg chg fontified nil)) . -1570) (1570 . 1571)) nil (25565 36235 360282 313000) 0 nil])
+([nil nil ((1497 . 1498)) nil (25565 36235 360281 142000) 0 nil])
+([nil nil ((#("
+" 0 1 (ws-butler-chg chg fontified t rear-nonsticky t)) . 1498) (undo-tree-id16 . -1) (undo-tree-id17 . -1) (#("    " 0 4 (fontified t ws-butler-chg chg)) . -1499) 1498) nil (25565 36235 360279 362000) 0 nil])
+([nil nil ((#("  " 0 2 (ws-butler-chg chg fontified t)) . -1512) 1532) nil (25565 36235 360265 214000) 0 nil])
+([nil nil ((1572 . 1580) (t 25565 36235 395536 320000)) nil (25565 36268 474272 636000) 0 nil])
+([nil nil ((1566 . 1567)) nil (25565 36268 474271 349000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1599 . 1600) (nil fontified nil 1590 . 1600) (nil fontified nil 1589 . 1590) (nil fontified nil 1588 . 1589) (nil fontified nil 1568 . 1588) (nil fontified nil 1567 . 1568) (1567 . 1600)) nil (25565 36268 474270 259000) 0 nil])
+([nil nil ((1636 . 1637) (#(")" 0 1 (fontified nil ws-butler-chg chg)) . -1636) (1636 . 1637)) nil (25565 36268 474268 315000) 0 nil])
+([nil nil ((1601 . 1603) 1567) nil (25565 36268 474267 405000) 0 nil])
+([nil nil ((1641 . 1642)) nil (25565 36268 474266 651000) 0 nil])
+([nil nil ((1641 . 1644)) nil (25565 36268 474265 661000) 0 nil])
+([nil nil ((#(";; " 0 3 (fontified t ws-butler-chg chg face font-lock-comment-delimiter-face)) . -1641) (undo-tree-id160 . -3) (undo-tree-id161 . -3) (undo-tree-id162 . -3) 1644) nil (25565 36268 474264 739000) 0 nil])
+([nil nil ((1641 . 1644)) nil (25565 36268 474262 384000) 0 nil])
+([nil nil ((1644 . 1721)) nil (25565 36268 474261 512000) 0 nil])
+([nil nil ((1721 . 1722)) nil (25565 36268 474260 733000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 1801 . 1802) (nil fontified nil 1725 . 1802) (nil fontified nil 1722 . 1725) (1722 . 1802)) nil (25565 36268 474259 608000) 0 nil])
+([nil nil ((1721 . 1722)) nil (25565 36268 474258 11000) 0 nil])
+([nil nil ((1722 . 1725)) nil (25565 36268 474257 382000) 0 nil])
+([nil nil ((1725 . 1737)) nil (25565 36268 474256 807000) 0 nil])
+([nil nil ((#("i" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -1735) (undo-tree-id158 . -1) (#("e" 0 1 (fontified t ws-butler-chg chg face font-lock-comment-face)) . -1736) (undo-tree-id159 . -1) 1737) nil (25565 36268 474255 772000) 0 nil])
+([nil nil ((1735 . 1738)) nil (25565 36268 474253 838000) 0 nil])
+([nil nil ((#("(provide 'setup-golang)
+" 0 1 (fontified t) 1 8 (fontified t face font-lock-keyword-face) 8 10 (fontified t) 10 22 (fontified t face font-lock-constant-face) 22 24 (fontified t)) . 2251) (undo-tree-id152 . -24) (undo-tree-id153 . 24) (undo-tree-id154 . -1) (undo-tree-id155 . 2) (undo-tree-id156 . -23) (undo-tree-id157 . -24)) nil (25565 36268 474252 456000) 0 nil])
+([nil nil ((#(";;; setup-golang.el ends here
+" 0 1 (fontified t ws-butler-chg delete face font-lock-comment-delimiter-face) 1 4 (fontified t face font-lock-comment-delimiter-face) 4 8 (fontified t face font-lock-comment-face) 8 15 (fontified t face font-lock-comment-face) 15 29 (fontified t face font-lock-comment-face) 29 30 (rear-nonsticky t fontified t face font-lock-comment-face)) . 2251) (undo-tree-id149 . -30) (undo-tree-id150 . -30) (undo-tree-id151 . -30)) nil (25565 36268 474245 594000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t)) . -2249) (undo-tree-id163 . -1) (undo-tree-id164 . -1) (undo-tree-id165 . -1) (undo-tree-id166 . -1) (undo-tree-id167 . -1) (#("
+" 0 1 (fontified t)) . -2250) (undo-tree-id168 . -1) (undo-tree-id169 . -1) (undo-tree-id170 . -1) (undo-tree-id171 . -1) (undo-tree-id172 . -1) 2251 (t 25565 36268 499537 835000)) nil (25565 36269 603881 345000) 0 nil])
+([nil nil ((2249 . 2250)) nil (25565 36269 603861 924000) 0 nil])
+([nil nil ((2130 . 2135) (#(" " 0 1 (fontified t)) . 2130) (undo-tree-id179 . -1) (undo-tree-id180 . -1) (undo-tree-id181 . -1) (undo-tree-id182 . -1) 2131 (t 25565 36269 631537 887000)) nil (25565 36288 475714 181000) 0 nil])
+([nil nil ((2131 . 2135) (#(" " 0 1 (fontified nil ws-butler-chg chg)) . -2131) (undo-tree-id177 . -1) (undo-tree-id178 . 1) (2130 . 2131) (2130 . 2131) (#("
+" 0 1 (fontified t ws-butler-chg chg)) . 2130) (#("    " 0 4 (fontified t ws-butler-chg chg)) . 2131) 2034) nil (25565 36288 475709 544000) 0 nil])
+([nil nil ((2131 . 2135) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . -2131) (undo-tree-id176 . -1) (2130 . 2131) (2130 . 2131) (#("
+" 0 1 (ws-butler-chg chg fontified t)) . 2130) (#("    " 0 4 (ws-butler-chg chg fontified t)) . 2131) 2036) nil (25565 36288 475705 779000) 0 nil])
+([nil nil ((2131 . 2135) (#(" " 0 1 (fontified nil ws-butler-chg chg)) . -2131) (undo-tree-id175 . -1) (2130 . 2131) (2130 . 2131) (#("
+" 0 1 (fontified t ws-butler-chg chg)) . 2130) (#("    " 0 4 (fontified t ws-butler-chg chg)) . 2131) 2036) nil (25565 36288 475702 758000) 0 nil])
+([nil nil ((2131 . 2135) (#(" " 0 1 (ws-butler-chg chg fontified nil)) . -2131) (undo-tree-id174 . -1) (2130 . 2131) (2130 . 2131) (#("
+" 0 1 (ws-butler-chg chg fontified t)) . 2130) (#("    " 0 4 (ws-butler-chg chg fontified t)) . 2131) 2036) nil (25565 36288 475699 459000) 0 nil])
+([nil current ((2131 . 2135) (#(" " 0 1 (fontified nil ws-butler-chg chg)) . -2131) (undo-tree-id173 . -1) (2130 . 2131) (2130 . 2131) (#("
+" 0 1 (fontified t ws-butler-chg chg)) . 2130) (#("    " 0 4 (fontified t ws-butler-chg chg)) . 2131) 2036) nil (25565 36288 475693 732000) 0 nil])
+nil
