@@ -64,6 +64,7 @@
 (message "** loading general configuration files")
 (timed-require 'general-config)
 (timed-require 'prog-config)
+(timed-require 'font-lock-config)
 
 ;; =============================================================================
 ;; Tools configuration.
