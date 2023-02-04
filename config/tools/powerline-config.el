@@ -35,17 +35,6 @@
     "Powerline face 1."
     :group 'powerline)
 
-  (defpowerline powerline-god
-    (let ((god-str
-           (cond (god-local-mode "GOD     ")
-                 ((member major-mode
-                          '(dired-mode magit-status-mode Man-mode
-                                       magit-diff-mode debugger-mode
-                                       apropos-mode package-menu-mode)
-                          ) "OTHER   ")
-                 (t "INSERT  "))))
-      god-str))
-
   (defface mypowerline-anzu-active
     '((t (:background "dark magenta" :foreground "white" :inherit mode-line)))
     "Powerline face 1."
@@ -56,6 +45,20 @@
                    :foreground "black")))
     "Powerline face on buffer name when edited."
     :group 'powerline)
+
+  ;; Define what to display for the vim like status
+  (defvar powerline-god-status-other-modes
+    '(dired-mode magit-status-mode Man-mode
+                                       magit-diff-mode debugger-mode
+                                       apropos-mode package-menu-mode)
+    "The list of modes that are displayed with OTHER rather than GOD or INSERT")
+  (defpowerline powerline-god
+    (let ((god-str
+           (cond
+            (god-local-mode "GOD     ")
+            ((member major-mode powerline-god-status-other-modes) "OTHER   ")
+            (t "INSERT  "))))
+      god-str))
 
   ;; Use anzu in the powerline
   (defpowerline powerline-anzu
@@ -165,110 +168,9 @@
                   (powerline-fill face2 (powerline-width rhs))
                   (powerline-render rhs)))))))
 
-  (which-function-mode 1)
-  ;; (eval-after-load "which-func"
-  ;; '(setq which-func-modes '(c++-mode org-mode)))
-
-  (setq which-func-unknown "---")
-
-  (defpowerline powerline-func
-    (let ((func-str (or (which-function) "---")))
-      func-str))
-
-
-  (defpowerline powerline-buffer-file-name
-    (let* ((buffer-str
-            (if buffer-file-name
-                (replace-regexp-in-string (regexp-quote (getenv "HOME"))
-                                          "~" buffer-file-name)
-              "[No file]"))
-           (buffer-width (window-total-width))
-           (name-width (length buffer-str))
-           )
-      (cond ((string= buffer-str "[No file]") buffer-str)
-            ((and (< buffer-width 80) (> name-width 35))
-             (replace-regexp-in-string ".*/\\([^/]*\\)" "\\1" buffer-str))
-            ((and (< buffer-width 120) (> name-width 50))
-             (replace-regexp-in-string
-              "\\([^/]+/[^/]+/\\).*\\(/[^/]*/[^/]*\\)" "\\1..\\2" buffer-str))
-            ((and (< buffer-width 120) (> name-width 35))
-             (replace-regexp-in-string
-              "\\([^/]+/[^/]+/\\).*\\(/[^/]*\\)" "\\1..\\2" buffer-str))
-            ((> name-width 55)
-             (replace-regexp-in-string
-              "\\([^/]+/[^/]+/\\).*\\(/[^/]*/[^/]*\\)" "\\1..\\2" buffer-str))
-            (t buffer-str)
-            )
-      ))
-
-
-  (defun powerline-show-func-p ()
-    (member major-mode '(
-                         c-mode c++-mode lua-mode
-                         )))
-
-  ;; ===========================================================================
-  ;; Header line configuration
-  ;; ===========================================================================
-  (defun header-line-custom-theme ()
-    "Setup the default mode-line."
-    (interactive)
-    (setq header-line-format
-          '((:eval
-             (let*
-                 ((active (powerline-selected-window-active))
-                  (face0 (if active 'mypowerline-active2 'powerline-inactive1))
-                  (face1 (if active 'powerline-inactive2 'powerline-inactive2
-                             'powerline-inactive1))
-                  (face2 'powerline-inactive0)
-                  (separator-left
-                   (intern
-                    (format "powerline-%s-%s"
-                            (powerline-current-separator)
-                            (car powerline-default-separator-dir))))
-                  (separator-right
-                   (intern (format "powerline-%s-%s"
-                                   (powerline-current-separator)
-                                   (cdr powerline-default-separator-dir))))
-                  (lhs (list
-                        (powerline-buffer-file-name face0 'l)
-                        (powerline-raw " " face0)
-                        (funcall separator-left face0 face2)
-                        ))
-                  (chs (list
-                        (when (bound-and-true-p nyan-mode)
-                          (powerline-raw (list "[" (nyan-create) "]")
-                                         face2 'l))
-                        ))
-                  (rhs (list
-                        (when (powerline-show-func-p)
-                          (funcall separator-right face2 face1))
-                        (when (powerline-show-func-p)
-                          (powerline-raw " " face1))
-                        (when (powerline-show-func-p)
-                          (powerline-func face1 'r))
-                        (if (powerline-show-func-p)
-                            (funcall separator-right face1 face0)
-                          (funcall separator-right face2 face0))
-                        (powerline-raw " " face0)
-                        (powerline-raw (symbol-name buffer-file-coding-system)
-                                       face0 'r)
-                        ;; (powerline-coding face0 'r)
-                        )))
-               (concat (powerline-render lhs)
-                       (powerline-fill-center face2 (/ (powerline-width chs)
-                                                       2.0))
-                       (powerline-render chs)
-                       (powerline-fill face2 (powerline-width rhs))
-                       (powerline-render rhs))))))
-    )
-
-
+  ;; Use the custom theme for the powerline
   (powerline-custom-theme)
-  ;; (header-line-custom-theme)
-  (defvar powerline-header-bar nil)
-  (if powerline-header-bar
-      (add-hook 'prog-mode-hook 'header-line-custom-theme))
 
-  (setq powerline-default-separator 'arrow)
+  ;; Use arrow as spearator
+  (setq-default powerline-default-separator 'arrow)
  )
