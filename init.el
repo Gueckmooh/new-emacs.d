@@ -19,7 +19,7 @@
      (proto (unless no-ssl "https" "http")))
   ;; Add melpa packages
   (add-to-list 'package-archives
-	       (cons "melpa" (concat proto "://melpa.org/packages/")) t))
+               (cons "melpa" (concat proto "://melpa.org/packages/")) t))
 
 (package-initialize)
 (when (not package-archive-contents)
@@ -52,11 +52,11 @@
   "Require configurations files and output the time it tooks"
     (let ((time-before-init (current-time)))
       (progn
-	(require symbol)
-	(message
-	 "*** loading %s.el took %.2fs"
-	 (symbol-name symbol)
-	 (float-time (time-subtract (current-time) time-before-init))))))
+        (require symbol)
+        (message
+         "*** loading %s.el took %.2fs"
+         (symbol-name symbol)
+         (float-time (time-subtract (current-time) time-before-init))))))
 
 ;; =============================================================================
 ;; General configuration of emacs.
@@ -88,4 +88,4 @@
 
 ;; Display total loading time
 (message "* loading init.el took %.2fs"
-	 (float-time (time-subtract (current-time) init-el-start-time)))
+         (float-time (time-subtract (current-time) init-el-start-time)))

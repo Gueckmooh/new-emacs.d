@@ -3,6 +3,8 @@
 ;; =============================================================================
 (provide 'golang-config)
 
+;; @todo respect the 80 columns
+
 ;; =============================================================================
 ;; Basic configuration
 ;; =============================================================================
@@ -22,8 +24,8 @@
      (list
       (let ((command (eval gobuild-command)))
         (if (or compilation-read-command current-prefix-arg)
-	    (compilation-read-command command)
-	  command))
+            (compilation-read-command command)
+          command))
       (consp current-prefix-arg)))
     (unless (equal command (eval gobuild-command))
       (setq gobuild-command command))
