@@ -77,6 +77,7 @@
 (timed-require 'lsp-config)
 (timed-require 'god-mode-config)
 (timed-require 'powerline-config)
+(timed-require 'projectile-config)
 
 ;; =============================================================================
 ;; Language configurations.
