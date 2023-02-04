@@ -3,10 +3,16 @@
 ;; =============================================================================
 (provide 'c-cpp-config)
 
+;; @todo find a way to evaluate all this lazilly
+
 ;; =============================================================================
 ;; Style configuration
 ;; =============================================================================
-(c-add-style "my-c-style"
+;; Interactively set the c style
+;;;###autoload
+(defun define-my-c-style ()
+  "Declare my c style."
+  (c-add-style "my-c-style"
              '((c-basic-offset . 4)
                (c-offsets-alist
                 (access-label . /)
@@ -81,12 +87,13 @@
                 (substatement-label . 2)
                 (substatement-open . 0)
                 (template-args-cont c-lineup-template-args +)
-                (topmost-intro-cont . c-lineup-topmost-intro-cont))))
+                (topmost-intro-cont . c-lineup-topmost-intro-cont)))))
 
-;; Interactively set the c style
+;;;###autoload
 (defun set-my-c-style ()
   "Set my c style."
   (interactive)
+  (define-my-c-style)
   (c-set-style "my-c-style"))
 
 (add-hook 'c-mode-hook 'set-my-c-style)
@@ -106,6 +113,7 @@
 
 ;; Format the file with clang format
 (use-package clang-format+
+  :defer t
   :hook
   (c-mode . clang-format+-mode)
   (c++-mode . clang-format+-mode))

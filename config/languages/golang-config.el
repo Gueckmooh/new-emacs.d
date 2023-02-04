@@ -9,9 +9,9 @@
 ;; Basic configuration
 ;; =============================================================================
 (use-package go-mode
-  :demand t
+  :ensure t
   :commands go-mode
-  :init
+  :config
   ;; Compiling go
   (defcustom gobuild-command (purecopy "go build -v && go test -v && go vet")
     "Go build command."

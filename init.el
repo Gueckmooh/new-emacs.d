@@ -85,6 +85,7 @@
 (message "** loading language configuration files")
 (timed-require 'c-cpp-config)
 (timed-require 'golang-config)
+(timed-require 'python-config)
 
 ;; Display total loading time
 (message "* loading init.el took %.2fs"
