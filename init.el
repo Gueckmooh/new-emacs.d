@@ -10,8 +10,6 @@
 (defvar init-el-start-time (current-time) "Time when init.el was started")
 
 ;; Configure package, to be able to install and manage packages
-(require 'package)
-
 (let*
     ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                   (not (gnutls-available-p))))
@@ -21,13 +19,24 @@
   (add-to-list 'package-archives
                (cons "melpa" (concat proto "://melpa.org/packages/")) t))
 
-(package-initialize)
-(when (not package-archive-contents)
-  (package-refresh-contents))
+;; Use straight as package manager, it is better than package.el and permits to
+;; have github based packages
+(setq package-enable-at-startup nil)
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el"
+                         user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-;; Configure `use-package` to have a nicer configuration
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+(straight-use-package 'use-package)
 
 (require 'use-package)
 (setq use-package-always-ensure t)
@@ -86,6 +95,7 @@
 (timed-require 'c-cpp-config)
 (timed-require 'golang-config)
 (timed-require 'python-config)
+(timed-require 'jai-config)
 
 ;; Display total loading time
 (message "* loading init.el took %.2fs"
