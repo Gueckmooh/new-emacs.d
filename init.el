@@ -70,8 +70,11 @@
 ;; =============================================================================
 (message "** loading tools configuration files")
 (timed-require 'helm-config)
+(timed-require 'magit-config)
 (timed-require 'company-config)
 (timed-require 'lsp-config)
+(timed-require 'god-mode-config)
+(timed-require 'powerline-config)
 
 ;; =============================================================================
 ;; Language configurations.

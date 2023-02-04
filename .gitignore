@@ -1,0 +1,6 @@
+*.~undo-tree~
+/.lsp-session-v1
+*~
+/custom.el
+/elpa/
+/xkcd/
