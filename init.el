@@ -89,6 +89,8 @@
 (timed-require 'god-mode-config)
 (timed-require 'powerline-config)
 (timed-require 'projectile-config)
+(timed-require 'ediff-config)
+;; (timed-require 'p4-config)
 
 ;; =============================================================================
 ;; Language configurations.
