@@ -95,6 +95,9 @@
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 
+;; Open emacs shell with C-x :
+(global-set-key (kbd "C-x :") 'eshell)
+
 ;; Undo tree, the best way to undo/redo stuff
 (use-package undo-tree
   :ensure t :demand t
