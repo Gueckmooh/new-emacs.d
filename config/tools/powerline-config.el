@@ -61,6 +61,9 @@
       god-str))
 
   ;; Use anzu in the powerline
+  (with-eval-after-load 'anzu
+    ;; Do not display the vanilla anzu mode line
+  (setq-default anzu-cons-mode-line-p nil))
   (defpowerline powerline-anzu
     (let ((god-str (anzu--update-mode-line)))
       god-str))

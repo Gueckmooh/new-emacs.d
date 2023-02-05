@@ -88,8 +88,6 @@
   (global-anzu-mode)
   (global-set-key (kbd "M-%") 'anzu-query-replace)
   (global-set-key (kbd "M-ù") 'anzu-query-replace-regexp)
-  ;; Do not display the vanilla mode line
-  (setq-default anzu-cons-mode-line-p nil)
   (set-face-attribute 'anzu-mode-line nil
                       :background "dark magenta" :foreground "white"))
 
