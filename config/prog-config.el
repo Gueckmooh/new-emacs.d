@@ -21,3 +21,10 @@ will look for in alternative to the good old Makefile."
 
 (define-key prog-mode-map (kbd "C-c RET") 'compile)
 (define-key prog-mode-map (kbd "C-x RET RET") 'desperately-compile)
+
+;; Setup gdb
+(require 'gdb-mi)
+;; Non-nil means display source file containing the main routine at startup
+(setq-default gdb-show-main t)
+;; Show many windows in GDB
+(setq-default gdb-many-windows t)
