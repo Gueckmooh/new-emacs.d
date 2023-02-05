@@ -18,6 +18,7 @@
     :type 'string
     :group 'compilation)
 
+;;;###autoload
   (defun go-compile (command &optional comint)
     "An implementation of the `compile' command for golang."
     (interactive
@@ -38,6 +39,7 @@
   (define-key go-mode-map (kbd "C-x RET RET") 'go-compile))
 
 ;; Format go on save
+;;;###autoload
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
   (add-hook 'before-save-hook #'lsp-organize-imports t t))

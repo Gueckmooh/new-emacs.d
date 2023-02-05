@@ -8,6 +8,7 @@
 ;; =============================================================================
 ;; Utilities
 ;; =============================================================================
+;;;###autoload
 (defun desperately-compile (&optional file)
   "Traveling up the path, find a Makefile and
 `compile'. Optionaly takes a parameter FILE which is the file it

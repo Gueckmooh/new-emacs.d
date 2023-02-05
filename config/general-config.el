@@ -175,6 +175,8 @@
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-N") 'forward-list)
 
+(global-set-key (kbd "C-x !") 'next-error)
+
 ;; Jump from window to window
 (use-package ace-window
   :ensure t :demand t
@@ -248,6 +250,8 @@ point reaches the beginning or end of the buffer, stop there."
    ";; To create a file, visit it with <open> and enter text in its buffer.\n\n"
    )
   "The text displayed in the scratch buffer when created")
+
+;;;###autoload
 (defun maybe-create-scratch-buffer nil
   "Create a scratch buffer."
   (interactive)
@@ -260,6 +264,7 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key (kbd "C-x ,") 'maybe-create-scratch-buffer)
 
 ;; Go to configuration directory
+;;;###autoload
 (defun edit-config ()
   "Open the config directory in dired."
   (interactive)
@@ -269,6 +274,7 @@ point reaches the beginning or end of the buffer, stop there."
 ;; Diff and merge
 ;; =============================================================================
 ;; ediff both A and B to C
+;;;###autoload
 (defun ediff-copy-both-to-C ()
   "Take both ediff changes to C buffer."
   (interactive)
@@ -278,6 +284,7 @@ point reaches the beginning or end of the buffer, stop there."
     (ediff-get-region-contents ediff-current-difference 'A ediff-control-buffer)
     (ediff-get-region-contents ediff-current-difference 'B ediff-control-buffer)
     )))
+;;;###autoload
 (defun add-d-to-ediff-mode-map ()
   (define-key ediff-mode-map "d" 'ediff-copy-both-to-C))
 (add-hook 'ediff-keymap-setup-hook 'add-d-to-ediff-mode-map)
