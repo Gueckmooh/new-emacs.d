@@ -14,9 +14,9 @@
 will look for in alternative to the good old Makefile."
   (interactive)
   (let ((file (cond (file file) (t "Makefile"))))
-    (when (locate-dominating-file default-directory makefile)
+    (when (locate-dominating-file default-directory file)
       (with-temp-buffer
-        (cd (locate-dominating-file default-directory makefile))
+        (cd (locate-dominating-file default-directory file))
         (call-interactively #'compile)))))
 
 (define-key prog-mode-map (kbd "C-c RET") 'compile)
