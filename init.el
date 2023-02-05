@@ -9,6 +9,8 @@
 ;; Capture launching time
 (defvar init-el-start-time (current-time) "Time when init.el was started")
 
+(require 'package)
+
 ;; Configure package, to be able to install and manage packages
 (let*
     ((no-ssl (and (memq system-type '(windows-nt ms-dos))
