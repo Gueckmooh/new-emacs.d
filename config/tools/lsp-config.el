@@ -14,9 +14,11 @@
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq-default lsp-keymap-prefix "C-c l")
   :hook
+  ;; The languages for which I use lsp-mode
   (c++-mode . lsp-deferred)
   (c-mode . lsp-deferred)
   (go-mode . lsp-deferred)
+  (python-mode . lsp-deferred)
   ;; if you want which-key integration
   (lsp-mode . lsp-enable-which-key-integration)
   :config

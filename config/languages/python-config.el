@@ -13,3 +13,6 @@
   (setq
    pipenv-projectile-after-switch-function
    #'pipenv-projectile-after-switch-extended))
+
+(setq-default python-shell-interpreter "/usr/bin/python")
+(setq-default python-indent-offset 4)
