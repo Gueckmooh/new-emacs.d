@@ -9,6 +9,7 @@
 (use-package helm
   :demand t
   :ensure t
+  :ensure helm-ag
   :init
   (global-unset-key (kbd "C-x c"))
   :bind
