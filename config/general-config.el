@@ -102,6 +102,7 @@
 (use-package undo-tree
   :ensure t :demand t
   :config
+  (setq-default undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
   (global-undo-tree-mode t))
 
 ;; Automatically get reload the buffer if the file changes and force
