@@ -96,8 +96,8 @@
   (define-my-c-style)
   (c-set-style "my-c-style"))
 
-(add-hook 'c-mode-hook 'set-my-c-style)
-(add-hook 'c++-mode-hook 'set-my-c-style)
+(add-hook 'c-mode-hook #'set-my-c-style)
+(add-hook 'c++-mode-hook #'set-my-c-style)
 
 ;; =============================================================================
 ;; Language configuration

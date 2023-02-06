@@ -70,8 +70,8 @@
          ("<escape>" . god-mode-isearch-disable)
          ("M-m" . god-mode-isearch-disable))
   :config
-  (add-hook 'god-mode-enabled-hook 'my/god-mode-update-cursor)
-  (add-hook 'god-mode-disabled-hook 'my/god-mode-update-cursor)
+  (add-hook 'god-mode-enabled-hook #'my/god-mode-update-cursor)
+  (add-hook 'god-mode-disabled-hook #'my/god-mode-update-cursor)
 
   (add-to-list 'god-exempt-major-modes 'eshell-mode)
   (add-to-list 'god-exempt-major-modes 'p4-basic-mode)
@@ -80,8 +80,8 @@
   (define-key god-local-mode-map (kbd ";") 'comment-dwim)
   (define-key god-local-mode-map (kbd "<f1>") 'help-command)
 
-  (add-hook 'compilation-mode-hook 'god-local-mode)
-  (add-hook 'help-mode-hook 'god-local-mode)
+  (add-hook 'compilation-mode-hook #'god-local-mode)
+  (add-hook 'help-mode-hook #'god-local-mode)
 
   (defun god-mode-all-if-not () (if (not god-global-mode) (god-mode-all)))
   (defvar idle-god-mode-timer

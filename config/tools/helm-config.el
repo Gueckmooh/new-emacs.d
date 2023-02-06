@@ -125,7 +125,7 @@
                                 ))
         (setq-local cursor-type nil))))
 
-  (add-hook 'helm-minibuffer-set-up-hook 'helm-hide-minibuffer-maybe)
+  (add-hook 'helm-minibuffer-set-up-hook #'helm-hide-minibuffer-maybe)
 
   )
 

@@ -42,7 +42,7 @@
 
 ;; Display fill column indicator, i.e., the line that tels people that
 ;; they are doing wrong with their very long line
-(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 ;; Make it look less aggressive to the eye
 (set-face-attribute 'fill-column-indicator nil :inherit 'font-lock-comment-face)
 (setq-default fill-column 80)
@@ -76,7 +76,7 @@
   (setq-default ahs-idle-interval 0.5))
 
 ;; Display line numbers
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 ;; =============================================================================
 ;; Buffer edition
@@ -165,7 +165,7 @@
 (setq-default mode-require-final-newline t)
 
 ;; Automatically add parenthesis
-(add-hook 'prog-mode-hook 'electric-pair-mode)
+(add-hook 'prog-mode-hook #'electric-pair-mode)
 
 ;; =============================================================================
 ;; Buffer movements
@@ -288,4 +288,4 @@ point reaches the beginning or end of the buffer, stop there."
 ;;;###autoload
 (defun add-d-to-ediff-mode-map ()
   (define-key ediff-mode-map "d" 'ediff-copy-both-to-C))
-(add-hook 'ediff-keymap-setup-hook 'add-d-to-ediff-mode-map)
+(add-hook 'ediff-keymap-setup-hook #'add-d-to-ediff-mode-map)

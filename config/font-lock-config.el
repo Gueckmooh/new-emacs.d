@@ -61,4 +61,4 @@
      ))
   )
 
-(add-hook 'prog-mode-hook 'upgrade-font-lock)
+(add-hook 'prog-mode-hook #'upgrade-font-lock)
