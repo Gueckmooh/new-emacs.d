@@ -102,6 +102,7 @@
 (timed-require 'golang-config)
 (timed-require 'python-config)
 (timed-require 'jai-config)
+(timed-require 'text-formats-config)
 
 ;; Display total loading time
 (message "* loading init.el took %.2fs"
