@@ -29,3 +29,11 @@ will look for in alternative to the good old Makefile."
 (setq-default gdb-show-main t)
 ;; Show many windows in GDB
 (setq-default gdb-many-windows t)
+
+(use-package highlight-indent-guides
+  :commands highlight-indent-guides-mode
+  :hook (prog-mode . highlight-indent-guides-mode)
+  :config
+  (setq-default highlight-indent-guides-method 'character)
+  (setq-default highlight-indent-guides-auto-enabled nil)
+  (set-face-foreground 'highlight-indent-guides-character-face "#8e9292"))
