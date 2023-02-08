@@ -88,6 +88,7 @@
     (run-with-idle-timer 10 t 'god-mode-all-if-not)
     "Timer that enables god mode after 10 seconds of inactivity")
 
+;;;###autoload
   (defun god-activate-idle-timer (&optional delay)
     "Activates the idle timer with DELAY if set, 10 seconds otherwise."
     (interactive)
@@ -96,6 +97,7 @@
           (setq idle-god-mode-timer
                 (run-with-idle-timer delay t 'god-mode-all-if-not)))))
 
+;;;###autoload
   (defun god-deactivate-idle-timer ()
     "Deactivates the idle timer."
     (interactive)
