@@ -8,8 +8,8 @@
 ;; =============================================================================
 (use-package company
   :ensure t
-  :commands (company-mode)
-  :bind ("<backtab>" . company-complete-common)
+  :commands (company-mode company-complete-common)
+  :bind ("M-i" . company-complete-common)
   :hook (prog-mode . company-mode)
   :config
   (setq-default company-idle-delay              0
