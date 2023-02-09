@@ -48,3 +48,16 @@
       lsp-lens-enable nil               ;; makes emacs too slow
       lsp-lens-place-position 'end-of-line
       lsp-signature-auto-activate nil)
+
+;; Load vscode projects without removing all the other projects
+;;;###autoload
+(defun lsp-load-vscode-workspace-no-remove (file)
+  "Load vscode workspace from FILE."
+  (interactive "fSelect file to import: ")
+
+  (let ((dir (f-dirname file)))
+    (->> file
+         (json-read-file)
+         (alist-get 'folders)
+         (-map (-lambda ((&alist 'path))
+                 (lsp-workspace-folders-add (expand-file-name path dir)))))))
