@@ -13,3 +13,4 @@
 *.elc
 /eln-cache/
 /tramp
+/recentf
