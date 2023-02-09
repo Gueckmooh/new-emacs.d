@@ -37,3 +37,12 @@ will look for in alternative to the good old Makefile."
   (setq-default highlight-indent-guides-method 'character)
   (setq-default highlight-indent-guides-auto-enabled nil)
   (set-face-foreground 'highlight-indent-guides-character-face "#6c6979"))
+
+(autoload #'ansi-color-apply-on-region "ansi-color" "Display ansi colors" t)
+
+;;;###autoload
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region compilation-filter-start (point))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
