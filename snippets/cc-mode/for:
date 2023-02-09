@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for:
+# key: for:
+# --
+for (auto& ${1:e} : ${2:ident})
+  {
+    $0
+  }

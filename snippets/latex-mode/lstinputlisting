@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: lstinputlisting
+# key: lsti
+# --
+\lstinputlisting[style=${1:style}${2:, label=lst:${3:label}}${4:, caption={${5:caption}}}${6:, firstline=${7:line}}${8:, lastline=${9:line}}]{${10:file}}
+$0

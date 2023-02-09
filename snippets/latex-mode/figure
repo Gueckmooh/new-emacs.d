@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig
+# --
+\begin{figure}[ht]
+  \centering
+  \includegraphics[${1:width=${2:\linewidth}}${3:, options..}]{${4:figures/${5:path.pdf}}}
+  \caption{$0}
+\end{figure}

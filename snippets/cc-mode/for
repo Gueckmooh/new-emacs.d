@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+for (${1:${2:int }i = 0}; ${3:i < ${4:N}}; ${5:++i})
+  {
+    $0
+  }

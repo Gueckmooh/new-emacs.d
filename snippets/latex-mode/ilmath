@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ilmath
+# key: $
+# --
+\\($1\\)$0
