@@ -59,15 +59,21 @@
 ;; =============================================================================
 ;; Require subconfigurations
 ;; =============================================================================
-(defun timed-require (symbol)
+(defun timed-require (symbol-or-filename)
   "Require configurations files and output the time it tooks"
-    (let ((time-before-init (current-time)))
-      (progn
-        (require symbol)
-        (message
-         "*** loading %s.el took %.2fs"
-         (symbol-name symbol)
-         (float-time (time-subtract (current-time) time-before-init))))))
+    (let* ((time-before-init (current-time))
+           (use-require (symbolp symbol-or-filename))
+           (file-name (if use-require
+                          (concat (symbol-name symbol-or-filename) ".el")
+                        (file-name-nondirectory symbol-or-filename))))
+      (if use-require
+        (require symbol-or-filename)
+        (if (file-exists-p symbol-or-filename)
+            (load-file symbol-or-filename)))
+      (message
+         "*** loading %s took %.2fs"
+         file-name
+         (float-time (time-subtract (current-time) time-before-init)))))
 
 ;; =============================================================================
 ;; General configuration of emacs.
