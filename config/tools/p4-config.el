@@ -11,13 +11,19 @@
 (use-package p4
   :ensure t
   :commands
-  (p4-add
+  (p4-opened
+   p4-add
    p4-revert
    p4-edit
    p4-diff
    p4-ediff
-   p4-change
-   p4-opened))
+   p4-change)
+  :bind
+  ("C-x p o" . p4-opened)
+  ("C-x p a" . p4-add)
+  ("C-x p r" . p4-revert)
+  ("C-x p e" . p4-edit)
+  ("C-x p =" . p4-diff))
 
 ;;;###autoload
 (defun command-line-p4diff (switch)
