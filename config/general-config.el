@@ -44,7 +44,8 @@
 ;; they are doing wrong with their very long line
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 ;; Make it look less aggressive to the eye
-(set-face-attribute 'fill-column-indicator nil :inherit 'font-lock-comment-face)
+(set-face-attribute 'fill-column-indicator nil :inherit 'font-lock-comment-face
+                    :foreground "#6c6979")
 (setq-default fill-column 80)
 
 ;; Highlight some operations such as undo/redo, kill and suff like that

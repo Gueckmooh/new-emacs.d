@@ -36,4 +36,4 @@ will look for in alternative to the good old Makefile."
   :config
   (setq-default highlight-indent-guides-method 'character)
   (setq-default highlight-indent-guides-auto-enabled nil)
-  (set-face-foreground 'highlight-indent-guides-character-face "#8e9292"))
+  (set-face-foreground 'highlight-indent-guides-character-face "#6c6979"))
