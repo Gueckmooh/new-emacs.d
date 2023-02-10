@@ -168,6 +168,21 @@
 ;; Automatically add parenthesis
 (add-hook 'prog-mode-hook #'electric-pair-mode)
 
+;; Redefine this hook function so that it indents the matching parenthesis
+(defun electric-pair-open-newline-between-pairs-psif ()
+  "Honor `electric-pair-open-newline-between-pairs'.
+Member of `post-self-insert-hook' if `electric-pair-mode' is on."
+  (when (and (if (functionp electric-pair-open-newline-between-pairs)
+                 (funcall electric-pair-open-newline-between-pairs)
+               electric-pair-open-newline-between-pairs)
+             (eq last-command-event ?\n)
+             (< (1+ (point-min)) (point) (point-max))
+             (eq (save-excursion
+                   (skip-chars-backward "\t\s")
+                   (char-before (1- (point))))
+                 (matching-paren (char-after))))
+    (save-excursion (newline 1 t) (indent-according-to-mode))))
+
 ;; =============================================================================
 ;; Buffer movements
 ;; =============================================================================
