@@ -20,7 +20,7 @@ will look for in alternative to the good old Makefile."
         (cd (locate-dominating-file default-directory file))
         (call-interactively #'compile)))))
 
-(define-key prog-mode-map (kbd "C-c RET") 'compile)
+(define-key prog-mode-map (kbd "C-c RET") 'recompile)
 (define-key prog-mode-map (kbd "C-x RET RET") 'desperately-compile)
 
 ;; Setup gdb
