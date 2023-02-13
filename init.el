@@ -109,6 +109,7 @@
 (timed-require 'python-config)
 (timed-require 'jai-config)
 (timed-require 'souffle-config)
+(timed-require 'renpy-config)
 (timed-require 'text-formats-config)
 
 ;; Display total loading time
