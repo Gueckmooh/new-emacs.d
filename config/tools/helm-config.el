@@ -100,7 +100,8 @@
     'helm-ff-switch-to-dired)
 
   (add-to-list 'helm-find-files-actions
-               '("Switch to dired `M-d'" . helm-ff-switch-to-dired))
+               '("Switch to dired `M-d'" . helm-ff-switch-to-dired)
+               t)
 
   (use-package helm-swoop
     :defer t
