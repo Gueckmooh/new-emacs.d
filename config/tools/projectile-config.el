@@ -16,4 +16,6 @@
     :bind
     (:map projectile-mode-map
      ("C-c p" . projectile-command-map))
-  ))
+  )
+  :config
+  (setq-default projectile-indexing-method 'hybrid))
