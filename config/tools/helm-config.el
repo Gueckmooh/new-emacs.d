@@ -41,7 +41,9 @@
    ;; ("C-l" . helm-locate-library)
    :map minibuffer-local-map
    ("M-p" . helm-minibuffer-history)
-   ("M-n" . helm-minibuffer-history))
+   ("M-n" . helm-minibuffer-history)
+   :map helm-find-files-map
+   ("M-d" . helm-ff-run-switch-to-dired))
   :config
   (require 'helm-config)
   (require 'helm-grep)
@@ -88,6 +90,18 @@
         helm-completion-style 'emacs)
   (add-to-list 'completion-styles 'flex)
 
+  (require 'helm-files)
+  (defun helm-ff-switch-to-dired (_candidate)
+    "Switch to a dired buffer in `helm-ff-default-directory'."
+    (dired helm-ff-default-directory))
+
+  (helm-make-command-from-action helm-ff-run-switch-to-dired
+    "Run switch to dired action from `helm-source-find-files'."
+    'helm-ff-switch-to-dired)
+
+  (add-to-list 'helm-find-files-actions
+               '("Switch to dired `M-d'" . helm-ff-switch-to-dired))
+
   (use-package helm-swoop
     :defer t
     :ensure helm
@@ -125,9 +139,7 @@
                                 ))
         (setq-local cursor-type nil))))
 
-  (add-hook 'helm-minibuffer-set-up-hook #'helm-hide-minibuffer-maybe)
-
-  )
+  (add-hook 'helm-minibuffer-set-up-hook #'helm-hide-minibuffer-maybe))
 
 (use-package ace-isearch
   :defer t
