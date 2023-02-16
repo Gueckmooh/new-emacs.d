@@ -38,8 +38,7 @@
   )
 
 (use-package helm-lsp :commands helm-lsp-workspace-symbol
-  :config
-  (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
+  :bind ([remap xref-find-apropos] . helm-lsp-workspace-symbol)
   )
 
 (setq gc-cons-threshold (* 100 1024 1024)
