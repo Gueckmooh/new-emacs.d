@@ -258,6 +258,9 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
+;; Toggle reverting buffer when the file changes.
+(global-auto-revert-mode)
+
 ;; =============================================================================
 ;; Utilities
 ;; =============================================================================
