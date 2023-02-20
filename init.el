@@ -99,6 +99,8 @@
 (timed-require 'ediff-config)
 ;; (timed-require 'p4-config)
 (timed-require 'chezmoi-config)
+(timed-require 'meson-config)
+(timed-require 'prolog-config)
 
 ;; =============================================================================
 ;; Language configurations.
