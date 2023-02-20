@@ -100,7 +100,6 @@
 ;; (timed-require 'p4-config)
 (timed-require 'chezmoi-config)
 (timed-require 'meson-config)
-(timed-require 'prolog-config)
 
 ;; =============================================================================
 ;; Language configurations.
@@ -112,7 +111,10 @@
 (timed-require 'jai-config)
 (timed-require 'souffle-config)
 (timed-require 'renpy-config)
+(timed-require 'prolog-config)
+(timed-require 'elixir-config)
 (timed-require 'text-formats-config)
+
 
 ;; Display total loading time
 (message "* loading init.el took %.2fs"
