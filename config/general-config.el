@@ -38,7 +38,7 @@
 ;; margin between the end of the screen and the cursor needed to trigger a
 ;; scroll
 (setq-default scroll-step 1)
-(setq-default scroll-margin 7)
+(setq-default scroll-margin 1)
 
 ;; Display fill column indicator, i.e., the line that tels people that
 ;; they are doing wrong with their very long line
