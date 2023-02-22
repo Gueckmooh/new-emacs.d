@@ -7,7 +7,9 @@
 ;; Basic configuration
 ;; =============================================================================
 (use-package projectile
-  :hook (prog-mode . projectile-mode))
+  :hook (prog-mode . projectile-mode)
+  :config
+  (add-to-list 'projectile-globally-ignored-directories "*.ccls-cache"))
 
 ;; Use projectile with helm if possible
 (with-eval-after-load 'helm-config
