@@ -50,7 +50,7 @@
                   (god-mode-all)))
          ("O" . other-window)
          ("o" . (lambda () (interactive) (end-of-line)
-                  (newline) (god-mode-all)))
+                  (newline) (indent-according-to-mode) (god-mode-all)))
          ("B" . helm-buffers-list)
          ("Q" . quit-window)
          ("V" . scroll-down-command)
