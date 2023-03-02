@@ -111,28 +111,28 @@
       ))
   (god-deactivate-idle-timer)
 
-(defvar my/fast-keyseq-timeout 100)
+  (defvar my/fast-keyseq-timeout 50.0)
 
-(defun my/-tty-ESC-filter (map)
-  (if (and (equal (this-single-command-keys) [?\e])
-           (sit-for (/ my/fast-keyseq-timeout 1000.0)))
-      [escape] map))
-
-
-(defun my/-lookup-key (map key)
-  (catch 'found
-    (map-keymap (lambda (k b) (if (equal key k) (throw 'found b))) map)))
+  (defun my/-tty-ESC-filter (map)
+    (if (and (equal (this-single-command-keys) [?\e])
+               (sit-for (/ my/fast-keyseq-timeout 1000.0)))
+        [escape] map))
 
 
-(defun my/catch-tty-ESC ()
-  "Setup key mappings of current terminal to turn a tty's ESC into `escape'."
-  (when (memq (terminal-live-p (frame-terminal)) '(t pc))
-    (let ((esc-binding (my/-lookup-key input-decode-map ?\e)))
-      (define-key input-decode-map
-        [?\e] `(menu-item "" ,esc-binding :filter my/-tty-ESC-filter)))))
+  (defun my/-lookup-key (map key)
+    (catch 'found
+      (map-keymap (lambda (k b) (if (equal key k) (throw 'found b))) map)))
 
-(if (not window-system)
-    (my/catch-tty-ESC))
+
+  (defun my/catch-tty-ESC ()
+    "Setup key mappings of current terminal to turn a tty's ESC into `escape'."
+    (when (memq (terminal-live-p (frame-terminal)) '(t pc))
+      (let ((esc-binding (my/-lookup-key input-decode-map ?\e)))
+        (define-key input-decode-map
+          [?\e] `(menu-item "" ,esc-binding :filter my/-tty-ESC-filter)))))
+
+  (my/catch-tty-ESC)
+  (add-hook 'server-after-make-frame-hook #'my/catch-tty-ESC)
   )
 
 ;; Activate god-mode by default at startup
