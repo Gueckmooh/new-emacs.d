@@ -109,7 +109,9 @@
 
 ;; Use ccls as language server
 ;; @todo do I need the defer ?
-(use-package ccls :defer t)
+(use-package ccls :defer t
+  :config
+  (setq-default ccls-sem-highlight-method 'overlay))
 
 ;; Format the file with clang format
 (use-package clang-format+

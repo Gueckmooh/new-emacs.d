@@ -35,7 +35,11 @@
     #'lsp-ui-peek-find-definitions)
   (define-key lsp-ui-mode-map [remap xref-find-references]
     #'lsp-ui-peek-find-references)
-  )
+  (define-key lsp-ui-mode-map (kbd "C-c l i") #'lsp-ui-imenu)
+  (setq-default lsp-ui-sideline-show-hover nil)
+  (setq-default lsp-ui-doc-include-signature t)
+  (setq-default lsp-ui-doc-show-with-cursor t)
+  (setq-default lsp-ui-doc-show-with-mouse nil))
 
 (use-package helm-lsp :commands helm-lsp-workspace-symbol
   :bind ([remap xref-find-apropos] . helm-lsp-workspace-symbol)
